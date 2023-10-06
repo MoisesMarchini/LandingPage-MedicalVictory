@@ -37,9 +37,9 @@ $justifies: center flex-start flex-end space-between;
 }
 
 
-@for $i from 0 through 6 {
+@for $i from 0 through 10 {
   $value: $i;
-  $gap-value: $value * calc(1 / 4);
+  $gap-value: $value * calc(1 / 2);
   .gap-#{$value} {
     gap: #{$gap-value}rem;
   }
