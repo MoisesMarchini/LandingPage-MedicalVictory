@@ -1,0 +1,12 @@
+<div class="card" [class.active]="card.active">
+  <div class="card-icon">
+    <img [src]="card.iconPath" [alt]="card.title" />
+  </div>
+  <h5 class="card-title">
+    {{ card.title }}
+  </h5>
+  <hr class="card-divider" />
+  <p class="card-body fw-500 text-secondary-text">
+    {{ card.body }}
+  </p>
+</div>

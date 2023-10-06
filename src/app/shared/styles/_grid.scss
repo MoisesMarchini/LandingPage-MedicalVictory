@@ -1,0 +1,10 @@
+.d-grid {
+  display: grid;
+}
+
+@for $i from 1 through 10 {
+  $cols: $i;
+  .grid-col-#{$cols} {
+    grid-template-columns: repeat(#{$cols}, 1fr);
+  }
+}

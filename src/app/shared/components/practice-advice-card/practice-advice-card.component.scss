@@ -1,0 +1,44 @@
+.card {
+  padding: 40px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 13px 19px 0 rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+  > * {
+    margin: 0;
+  }
+  > .card-icon {
+    width: 75px;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background-color: #DDEEFE;
+  }
+  > .card-divider {
+    width: 50px;
+    height: 2px;
+    background-color: var(--highlight);
+    border: none;
+    margin-left: 0;
+  }
+  > .card-body {
+    max-width: 80%;
+  }
+}
+
+.card.active, .card:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  > .card-icon {
+    background-color: var(--white);
+  }
+  > .card-divider {
+    background-color: var(--white);
+  }
+  > .card-body {
+    color: var(--white);
+  }
+}
