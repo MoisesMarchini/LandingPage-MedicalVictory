@@ -5,6 +5,8 @@ import { PracticeAdviceComponent } from './practice-advice/practice-advice.compo
 import { SharedModule } from '../shared/shared.module';
 import { OurDepartmentComponent } from './our-department/our-department.component';
 import { CoursesComponent } from './courses/courses.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { TeamComponent } from './team/team.component';
 
 
 
@@ -13,7 +15,9 @@ import { CoursesComponent } from './courses/courses.component';
     HeaderComponent,
     PracticeAdviceComponent,
     OurDepartmentComponent,
-    CoursesComponent
+    CoursesComponent,
+    TestimonialsComponent,
+    TeamComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +27,9 @@ import { CoursesComponent } from './courses/courses.component';
     HeaderComponent,
     PracticeAdviceComponent,
     OurDepartmentComponent,
-    CoursesComponent
+    CoursesComponent,
+    TestimonialsComponent,
+    TeamComponent
   ]
 })
 export class SectionsModule { }

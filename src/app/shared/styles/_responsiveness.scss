@@ -1,0 +1,19 @@
+$md-breakpoint: 768px;
+$lg-breakpoint: 1024px;
+
+$displays: none flex block grid inline;
+@each $display in $displays {
+  .d-#{$display} {
+    display: #{$display};
+  }
+  @media (min-width: $md-breakpoint) {
+    .d-md-#{$display} {
+      display: #{$display};
+    }
+  }
+  @media (min-width: $lg-breakpoint) {
+    .d-lg-#{$display} {
+      display: #{$display};
+    }
+  }
+}

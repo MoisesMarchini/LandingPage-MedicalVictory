@@ -1,10 +1,16 @@
-.d-grid {
-  display: grid;
-}
-
 @for $i from 1 through 10 {
   $cols: $i;
   .grid-col-#{$cols} {
     grid-template-columns: repeat(#{$cols}, 1fr);
+  }
+  @media (min-width: $md-breakpoint) {
+    .grid-col-md-#{$cols} {
+      grid-template-columns: repeat(#{$cols}, 1fr);
+    }
+  }
+  @media (min-width: $lg-breakpoint) {
+    .grid-col-lg-#{$cols} {
+      grid-template-columns: repeat(#{$cols}, 1fr);
+    }
   }
 }
