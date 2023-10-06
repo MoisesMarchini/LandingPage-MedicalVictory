@@ -1,0 +1,24 @@
+$white: #fff;
+$black: #000;
+$shiny: #F3CD03;
+$primary: #FC724D;
+$highlight: #E74040;
+$dark: #26335D;
+$muted: #BDBDBD;
+$text-color: #252B42;
+$primary-text-color: #FC724D;
+$secondary-text-color: #737373;
+
+$all-colors: (
+  'white': $white,
+  'black': $black,
+  'shiny': $shiny,
+  'primary': $primary,
+  'highlight': $highlight,
+  'dark': $dark,
+  'muted': $muted,
+  'base-text': $text-color,
+  'primary-text': $primary-text-color,
+  'secondary-text': $secondary-text-color,
+);
+

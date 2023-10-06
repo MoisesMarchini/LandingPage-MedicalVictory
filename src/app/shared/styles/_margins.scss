@@ -1,0 +1,38 @@
+@for $i from 0 through 10 {
+  $value: $i;
+  $margin-value: $value * calc(1 / 4);
+  .m-#{$value} {
+    margin: #{$margin-value}rem;
+  }
+  .mx-#{$value} {
+    margin-right: #{$margin-value}rem;
+    margin-left: #{$margin-value}rem;
+  }
+  .my-#{$value} {
+    margin-top: #{$margin-value}rem;
+    margin-bottom: #{$margin-value}rem;
+  }
+  .me-#{$value} {
+    margin-right: #{$margin-value}rem;
+  }
+  .ms-#{$value} {
+    margin-left: #{$margin-value}rem;
+  }
+  .mb-#{$value} {
+    margin-bottom: #{$margin-value}rem;
+  }
+  .mt-#{$value} {
+    margin-top: #{$margin-value}rem;
+  }
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.me-auto {
+  margin-right: auto;
+}
+.ms-auto {
+  margin-left: auto;
+}

@@ -1,0 +1,27 @@
+@for $i from 0 through 10 {
+  $value: $i;
+  $padding-value: $value * calc(1 / 4);
+  .p-#{$value} {
+    padding: #{$padding-value}rem;
+  }
+  .px-#{$value} {
+    padding-right: #{$padding-value}rem;
+    padding-left: #{$padding-value}rem;
+  }
+  .py-#{$value} {
+    padding-top: #{$padding-value}rem;
+    padding-bottom: #{$padding-value}rem;
+  }
+  .pe-#{$value} {
+    padding-right: #{$padding-value}rem;
+  }
+  .ps-#{$value} {
+    padding-left: #{$padding-value}rem;
+  }
+  .pb-#{$value} {
+    padding-bottom: #{$padding-value}rem;
+  }
+  .pt-#{$value} {
+    padding-top: #{$padding-value}rem;
+  }
+}

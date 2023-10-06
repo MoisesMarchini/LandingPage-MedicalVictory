@@ -1,0 +1,8 @@
+.container {
+  --_base-padding-x: 3rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: clamp(min(200px, 100%), 80vw, 1200px);
+  padding-left: calc(var(--_base-padding-x) * .5);
+  padding-right: calc(var(--_base-padding-x) * .5);
+}

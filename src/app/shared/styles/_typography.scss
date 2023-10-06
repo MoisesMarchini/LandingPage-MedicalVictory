@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, .h1 {
+  font-size: 58px;
+}
+
+h4, .h4 {
+  font-size: 20px;
+}
+
+h5, .h5 {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@each $color-name, $color-value in $all-colors {
+  :root {
+    --#{$color-name}: #{$color-value};
+  }
+  .text-#{$color-name}{
+    color: var(--#{$color-name});
+  }
+}
+
+@for $i from 1 through 9 {
+  $value: $i * 100;
+  .fw-#{$value} {
+    font-weight: $value !important;
+  }
+}
+
+@for $i from 10 through 30 {
+  $value: $i;
+  .fs-#{$value} {
+    font-size: #{$value}px !important;
+  }
+}
+
+$text-transforms: uppercase lowercase capitalize;
+@each $text-transform in $text-transforms {
+  .text-#{$text-transform} {
+    text-transform: #{$text-transform};
+  }
+}
+
+$text-alignments: start end center;
+@each $text-alignment in $text-alignments {
+  .text-#{$text-alignment} {
+    text-align: #{$text-alignment};
+  }
+}

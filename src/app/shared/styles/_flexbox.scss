@@ -1,0 +1,59 @@
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+$alignments: center flex-start flex-end;
+@each $alignment in $alignments {
+  .align-items-#{$alignment} {
+    align-items: #{$alignment};
+  }
+  .align-content-#{$alignment} {
+    align-content: #{$alignment};
+  }
+  .align-self-#{$alignment} {
+    align-self: #{$alignment};
+  }
+}
+
+$justifies: center flex-start flex-end space-between;
+@each $justify in $justifies {
+  .justify-items-#{$justify} {
+    justify-items: #{$justify};
+  }
+  .justify-content-#{$justify} {
+    justify-content: #{$justify};
+  }
+  .justify-self-#{$justify} {
+    justify-self: #{$justify};
+  }
+}
+
+
+@for $i from 0 through 6 {
+  $value: $i;
+  $gap-value: $value * calc(1 / 4);
+  .gap-#{$value} {
+    gap: #{$gap-value}rem;
+  }
+}
+
+@for $i from 0 through 1 {
+  $value: $i;
+  .flex-grow-#{$value} {
+    flex-grow: $value;
+  }
+  .flex-shrink-#{$value} {
+    flex-shrink: $value;
+  }
+  .flex-#{$value} {
+    flex: $value $value;
+  }
+}

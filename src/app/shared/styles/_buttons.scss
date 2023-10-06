@@ -1,0 +1,14 @@
+.btn {
+  --_btn-color: var(--black);
+  --_btn-bg-color: var(--white);
+  padding: 12px 24px;
+  border-radius: 4px;
+  background-color: var(--_btn-bg-color);
+  color: var(--_btn-color);
+  cursor: pointer;
+}
+
+.btn-primary {
+  --_btn-color: var(--white);
+  --_btn-bg-color: var(--primary);
+}
