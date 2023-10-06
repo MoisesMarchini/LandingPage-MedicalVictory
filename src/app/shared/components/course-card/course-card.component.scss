@@ -1,0 +1,28 @@
+.card {
+  > .card-img-container {
+    position: relative;
+    height: 300px;
+    > span.sale-chip, > .action-btns {
+      position: absolute;
+    }
+    > span.sale-chip {
+      top: 0;
+      left: 0;
+      margin: 16px;
+      background-color: var(--highlight);
+      color: white;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+    > .action-btns {
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  > .card-content {
+    padding: 16px;
+  }
+}

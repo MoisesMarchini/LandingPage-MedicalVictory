@@ -1,0 +1,11 @@
+<section class="container">
+  <h6 class="section-name">Courses</h6>
+  <h2>The Best Reference</h2>
+  <p class="text-secondary-text mb-section" style="max-width: 463px">
+    Problems trying to resolve the conflict between the two major realms of
+    Classical physics: Newtonian mechanics
+  </p>
+  <div class="d-grid grid-col-4" style="gap: 32px">
+    <app-course-card *ngFor="let card of cards" [card]="card"></app-course-card>
+  </div>
+</section>

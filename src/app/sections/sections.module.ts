@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { PracticeAdviceComponent } from './practice-advice/practice-advice.component';
 import { SharedModule } from '../shared/shared.module';
 import { OurDepartmentComponent } from './our-department/our-department.component';
+import { CoursesComponent } from './courses/courses.component';
 
 
 
@@ -11,7 +12,8 @@ import { OurDepartmentComponent } from './our-department/our-department.componen
   declarations: [
     HeaderComponent,
     PracticeAdviceComponent,
-    OurDepartmentComponent
+    OurDepartmentComponent,
+    CoursesComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { OurDepartmentComponent } from './our-department/our-department.componen
   exports: [
     HeaderComponent,
     PracticeAdviceComponent,
-    OurDepartmentComponent
+    OurDepartmentComponent,
+    CoursesComponent
   ]
 })
 export class SectionsModule { }
