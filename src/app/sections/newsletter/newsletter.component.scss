@@ -1,0 +1,22 @@
+form.subscribe-form {
+  max-width: 688px;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #F9F9F9;
+  color: var(--secondary-text);
+  font-family: "Montserrat", sans-serif;
+  > input {
+    border: 0;
+    background: transparent;
+    padding: 1rem;
+    font-size: 12px;
+    font-family: inherit;
+    font-weight: 600;
+  }
+  > button {
+    border-radius: 0;
+    font-weight: 600;
+    font-family: inherit;
+  }
+}

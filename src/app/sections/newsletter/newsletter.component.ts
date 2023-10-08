@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-newsletter',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./newsletter.component.scss']
 })
 export class NewsletterComponent {
-
+  onSubmit(form: NgForm) {
+    if (form.invalid) {
+      console.warn('Insira um email válido');
+      return;
+    }
+    
+    console.log('Enviando email para: ' + form.value.email);
+  }
 }

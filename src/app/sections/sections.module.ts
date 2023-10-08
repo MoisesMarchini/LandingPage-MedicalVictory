@@ -8,6 +8,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { TeamComponent } from './team/team.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -23,7 +24,8 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,
