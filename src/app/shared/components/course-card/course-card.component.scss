@@ -24,5 +24,12 @@
   }
   > .card-content {
     padding: 16px;
+    > h5.card-subtitle {
+      line-height: 1.2;
+      height: calc(1.2em * 2);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-wrap: balance;
+    }
   }
 }

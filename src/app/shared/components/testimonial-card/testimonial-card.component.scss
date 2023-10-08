@@ -1,0 +1,9 @@
+.card {
+  > img.testimonial-img {
+    width: 128px;
+    border-radius: 50%;
+  }
+  > p.testimonial-body {
+    max-width: 320px;
+  }
+}

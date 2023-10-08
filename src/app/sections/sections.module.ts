@@ -7,6 +7,7 @@ import { OurDepartmentComponent } from './our-department/our-department.componen
 import { CoursesComponent } from './courses/courses.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { TeamComponent } from './team/team.component';
+import { NewsletterComponent } from './newsletter/newsletter.component';
 
 
 
@@ -17,7 +18,8 @@ import { TeamComponent } from './team/team.component';
     OurDepartmentComponent,
     CoursesComponent,
     TestimonialsComponent,
-    TeamComponent
+    TeamComponent,
+    NewsletterComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { TeamComponent } from './team/team.component';
     OurDepartmentComponent,
     CoursesComponent,
     TestimonialsComponent,
-    TeamComponent
+    TeamComponent,
+    NewsletterComponent
   ]
 })
 export class SectionsModule { }
