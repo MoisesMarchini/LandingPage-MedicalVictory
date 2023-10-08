@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PracticeAdviceCardComponent } from './practice-advice-card/practice-advice-card.component';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { TestimonialCardComponent } from './testimonial-card/testimonial-card.component';
+import { TeamCardComponent } from './team-card/team-card.component';
 
 
 
@@ -10,7 +11,8 @@ import { TestimonialCardComponent } from './testimonial-card/testimonial-card.co
   declarations: [
     PracticeAdviceCardComponent,
     CourseCardComponent,
-    TestimonialCardComponent
+    TestimonialCardComponent,
+    TeamCardComponent
   ],
   imports: [
     CommonModule
@@ -18,7 +20,8 @@ import { TestimonialCardComponent } from './testimonial-card/testimonial-card.co
   exports: [
     PracticeAdviceCardComponent,
     CourseCardComponent,
-    TestimonialCardComponent
+    TestimonialCardComponent,
+    TeamCardComponent
   ]
 })
 export class ComponentsModule { }

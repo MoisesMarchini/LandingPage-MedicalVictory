@@ -1,0 +1,7 @@
+:root {
+  --card-shadow: 0 13px 19px 0 rgba(0, 0, 0, 0.07);
+}
+
+.card-shadow {
+  box-shadow: var(--card-shadow);
+}
