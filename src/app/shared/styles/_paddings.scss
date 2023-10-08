@@ -2,26 +2,26 @@
   $value: $i;
   $padding-value: $value * calc(1 / 4);
   .p-#{$value} {
-    padding: #{$padding-value}rem;
+    padding: #{$padding-value}rem !important;
   }
   .px-#{$value} {
-    padding-right: #{$padding-value}rem;
-    padding-left: #{$padding-value}rem;
+    padding-right: #{$padding-value}rem !important;
+    padding-left: #{$padding-value}rem !important;
   }
   .py-#{$value} {
-    padding-top: #{$padding-value}rem;
-    padding-bottom: #{$padding-value}rem;
+    padding-top: #{$padding-value}rem !important;
+    padding-bottom: #{$padding-value}rem !important;
   }
   .pe-#{$value} {
-    padding-right: #{$padding-value}rem;
+    padding-right: #{$padding-value}rem !important;
   }
   .ps-#{$value} {
-    padding-left: #{$padding-value}rem;
+    padding-left: #{$padding-value}rem !important;
   }
   .pb-#{$value} {
-    padding-bottom: #{$padding-value}rem;
+    padding-bottom: #{$padding-value}rem !important;
   }
   .pt-#{$value} {
-    padding-top: #{$padding-value}rem;
+    padding-top: #{$padding-value}rem !important;
   }
 }

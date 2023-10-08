@@ -1,0 +1,80 @@
+<footer class="section pb-0">
+  <div class="row mb-10">
+    <div class="container d-flex gap-5" style="flex-wrap: wrap">
+      <div *ngFor="let list of footerLists" class="footer-list flex-grow-1">
+        <h5 class="mb-4">{{ list.title }}</h5>
+        <ul class="footer-list">
+          <li *ngFor="let item of list.links" class="footer-list-item mb-3">
+            <a
+              href="#"
+              class="footer-list-link text-secondary-text fw-600 fs-14"
+              >{{ item }}</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-list flex-grow-1" style="overflow: hidden">
+        <h5 class="mb-4">{{ getInTouch.title }}</h5>
+        <ul class="footer-list">
+          <li
+            *ngFor="let item of getInTouch.links; let i = index"
+            class="footer-list-item mb-3"
+          >
+            <a
+              href="#"
+              class="footer-list-link d-flex align-items-center text-secondary-text fw-600 fs-14"
+              style="
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+              "
+            >
+              <img [src]="getInTouch.icons[i]" class="me-3" />
+              {{ item }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div
+    class="row"
+    style="background-color: #fafafa; padding-top: 24px; padding-bottom: 24px"
+  >
+    <div
+      class="container d-flex align-items-center justify-content-space-between fw-600 fs-14 gap-3"
+      style="flex-wrap: wrap"
+    >
+      <p class="text-secondary-text m-0">
+        Made With Love By Figmaland All Right Reserved
+      </p>
+      <ul class="social-media-list d-flex gap-2 align-items-center">
+        <li class="social-media-item">
+          <a href="#" class="social-media-link">
+            <img
+              [src]="socialMediaIcons['Facebook']"
+              class="social-media-icon"
+            />
+          </a>
+        </li>
+        <li class="social-media-item">
+          <a href="#" class="social-media-link">
+            <img
+              [src]="socialMediaIcons['Instagram']"
+              class="social-media-icon"
+            />
+          </a>
+        </li>
+        <li class="social-media-item">
+          <a href="#" class="social-media-link">
+            <img
+              [src]="socialMediaIcons['Twitter']"
+              class="social-media-icon"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>

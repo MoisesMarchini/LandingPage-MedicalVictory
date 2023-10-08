@@ -13,4 +13,9 @@
       grid-template-columns: repeat(#{$cols}, 1fr);
     }
   }
+  @media (min-width: $xl-breakpoint) {
+    .grid-col-xl-#{$cols} {
+      grid-template-columns: repeat(#{$cols}, 1fr);
+    }
+  }
 }

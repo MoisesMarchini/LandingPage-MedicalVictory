@@ -4,24 +4,16 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-h1, .h1 {
-  font-size: 58px;
+:root {
+  --base-font-size: 16px;
+  --font-size: 13;
+  font-size: calc(var(--font-size) * 1px);
 }
 
-h2, .h2 {
-  font-size: 40px;
-}
-
-h4, .h4 {
-  font-size: 20px;
-}
-
-h5, .h5 {
-  font-size: 16px;
-}
-
-h6, .h6 {
-  font-size: 14px;
+@media (min-width: $md-breakpoint) {
+  :root {
+    --font-size: 16;
+  }
 }
 
 h1, h2, h3, h4, h5, h6, p,
@@ -30,9 +22,24 @@ h1, h2, h3, h4, h5, h6, p,
   margin-bottom: 8px;
 }
 
+h1, .h1 {
+  font-size: 3.625rem;
+}
 
-p, .p {
-  font-size: 14px;
+h2, .h2 {
+  font-size: 2.5rem;
+}
+
+h4, .h4 {
+  font-size: 1.25rem;
+}
+
+h5, .h5 {
+  font-size: 1rem;
+}
+
+h6, .h6, p, .p {
+  font-size: .875rem;
 }
 
 a {
@@ -58,8 +65,24 @@ a {
 
 @for $i from 10 through 30 {
   $value: $i;
+  $baseValue: 16;
   .fs-#{$value} {
-    font-size: #{$value}px !important;
+    font-size: #{$value / $baseValue}rem !important;
+  }
+  @media (min-width: $md-breakpoint) {
+    .fs-md-#{$value} {
+      font-size: #{$value / $baseValue}rem !important;
+    }
+  }
+  @media (min-width: $lg-breakpoint) {
+    .fs-lg-#{$value} {
+      font-size: #{$value / $baseValue}rem !important;
+    }
+  }
+  @media (min-width: $xl-breakpoint) {
+    .fs-xl-#{$value} {
+      font-size: #{$value / $baseValue}rem !important;
+    }
   }
 }
 

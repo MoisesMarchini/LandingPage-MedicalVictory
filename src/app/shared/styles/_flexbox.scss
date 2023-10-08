@@ -1,9 +1,23 @@
-.flex-column {
-  flex-direction: column;
-}
-
-.flex-row {
-  flex-direction: row;
+$flex-directions: row column;
+@each $direction in $flex-directions{
+  .flex-#{$direction} {
+    flex-direction: #{$direction};
+  }
+  @media (min-width: $md-breakpoint) {
+    .flex-md-#{$direction} {
+      flex-direction: #{$direction} !important;
+    }
+  }
+  @media (min-width: $lg-breakpoint) {
+    .flex-lg-#{$direction} {
+      flex-direction: #{$direction} !important;
+    }
+  }
+  @media (min-width: $xl-breakpoint) {
+    .flex-xl-#{$direction} {
+      flex-direction: #{$direction} !important;
+    }
+  }
 }
 
 $alignments: center flex-start flex-end;
@@ -38,6 +52,21 @@ $justifies: center flex-start flex-end space-between;
   $gap-value: $value * calc(1 / 2);
   .gap-#{$value} {
     gap: #{$gap-value}rem;
+  }
+  @media (min-width: $md-breakpoint) {
+    .gap-md-#{$value} {
+    gap: #{$gap-value}rem;
+    }
+  }
+  @media (min-width: $lg-breakpoint) {
+    .gap-lg-#{$value} {
+    gap: #{$gap-value}rem;
+    }
+  }
+  @media (min-width: $xl-breakpoint) {
+    .gap-xl-#{$value} {
+    gap: #{$gap-value}rem;
+    }
   }
 }
 

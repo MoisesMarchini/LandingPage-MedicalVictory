@@ -9,6 +9,7 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { TeamComponent } from './team/team.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     CoursesComponent,
     TestimonialsComponent,
     TeamComponent,
-    NewsletterComponent
+    NewsletterComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +36,8 @@ import { FormsModule } from '@angular/forms';
     CoursesComponent,
     TestimonialsComponent,
     TeamComponent,
-    NewsletterComponent
+    NewsletterComponent,
+    FooterComponent
   ]
 })
 export class SectionsModule { }
