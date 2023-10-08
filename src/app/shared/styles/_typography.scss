@@ -47,10 +47,13 @@ a {
   color: inherit;
 }
 
-@each $color-name, $color-value in $all-colors {
-  :root {
+:root {
+  @each $color-name, $color-value in $all-colors {
     --#{$color-name}: #{$color-value};
   }
+}
+
+@each $color-name, $color-value in $all-colors {
   .text-#{$color-name}{
     color: var(--#{$color-name});
   }
