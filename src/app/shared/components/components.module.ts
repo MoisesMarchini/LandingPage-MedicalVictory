@@ -1,27 +1,30 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PracticeAdviceCardComponent } from './practice-advice-card/practice-advice-card.component';
+import { PrimaryCardComponent } from './primary-card/primary-card.component';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { TestimonialCardComponent } from './testimonial-card/testimonial-card.component';
 import { TeamCardComponent } from './team-card/team-card.component';
+import { SectionComponent } from './section/section.component';
 
 
 
 @NgModule({
   declarations: [
-    PracticeAdviceCardComponent,
+    PrimaryCardComponent,
     CourseCardComponent,
     TestimonialCardComponent,
-    TeamCardComponent
+    TeamCardComponent,
+    SectionComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    PracticeAdviceCardComponent,
+    PrimaryCardComponent,
     CourseCardComponent,
     TestimonialCardComponent,
-    TeamCardComponent
+    TeamCardComponent,
+    SectionComponent
   ]
 })
 export class ComponentsModule { }

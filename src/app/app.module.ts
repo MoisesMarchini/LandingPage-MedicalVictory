@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { SectionsModule } from './sections/sections.module';
+import { PagesRoutingModule } from './pages-routing.module';
 import { SharedModule } from './shared/shared.module';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     SharedModule,
-    SectionsModule
+    PagesModule,
+    PagesRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

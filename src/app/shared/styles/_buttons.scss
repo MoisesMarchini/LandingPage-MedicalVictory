@@ -20,6 +20,17 @@
   border: 1px solid var(--primary);
 }
 
+.btn.btn-highlight {
+  --_btn-color: var(--white);
+  --_btn-bg-color: var(--highlight);
+}
+
+.btn.btn-outline-highlight {
+  --_btn-color: var(--highlight);
+  --_btn-bg-color: transparent;
+  border: 1px solid var(--highlight);
+}
+
 .btn.btn-action {
   border-radius: 40px;
   width: 40px;

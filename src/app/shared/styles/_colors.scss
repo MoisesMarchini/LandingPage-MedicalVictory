@@ -3,17 +3,19 @@ $black: #000;
 $external-bg: #252F3D;
 $blue: #0061FF;
 $shiny: #F3CD03;
-$primary: #FC724D;
-$highlight: #E74040;
+$primary: #0988C3;
+$highlight: #ff7f02;
 $dark: #26335D;
 $muted: #BDBDBD;
 $text-color: #252B42;
-$primary-text-color: #FC724D;
+$primary-text-color: $primary;
 $secondary-text-color: #737373;
+$border-color: #DDEEFE;
 
 $all-colors: (
   'white': $white,
   'black': $black,
+  'border-color': $border-color,
   'external-bg': $external-bg,
   'blue': $blue,
   'shiny': $shiny,

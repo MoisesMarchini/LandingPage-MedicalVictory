@@ -1,0 +1,8 @@
+<app-section [model]="sectionModel">
+  <div sectionContent class="d-grid grid-col-lg-4 grid-col-2" style="gap: 16px">
+    <app-primary-card
+      *ngFor="let card of cards"
+      [card]="card"
+    ></app-primary-card>
+  </div>
+</app-section>

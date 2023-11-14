@@ -1,0 +1,11 @@
+<section class="container" *ngIf="model">
+  <h6 class="section-name fs-14">{{ model.sectionName }}</h6>
+  <h2>{{ model.title }}</h2>
+  <p
+    *ngIf="model.description"
+    style="max-width: min(600px, 100%); line-height: 1.4"
+    class="text-secondary-text mb-section"
+    [innerHTML]="model.description"
+  ></p>
+  <ng-content select="[sectionContent]"></ng-content>
+</section>
