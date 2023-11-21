@@ -66,7 +66,7 @@ a {
   }
 }
 
-@for $i from 10 through 30 {
+@for $i from 10 through 48 {
   $value: $i;
   $baseValue: 16;
   .fs-#{$value} {

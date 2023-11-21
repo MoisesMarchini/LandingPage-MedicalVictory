@@ -5,6 +5,7 @@ import { CourseCardComponent } from './course-card/course-card.component';
 import { TestimonialCardComponent } from './testimonial-card/testimonial-card.component';
 import { TeamCardComponent } from './team-card/team-card.component';
 import { SectionComponent } from './section/section.component';
+import { HeroCarouselComponent } from './hero-carousel/hero-carousel.component';
 
 
 
@@ -14,7 +15,8 @@ import { SectionComponent } from './section/section.component';
     CourseCardComponent,
     TestimonialCardComponent,
     TeamCardComponent,
-    SectionComponent
+    SectionComponent,
+    HeroCarouselComponent
   ],
   imports: [
     CommonModule
@@ -24,7 +26,8 @@ import { SectionComponent } from './section/section.component';
     CourseCardComponent,
     TestimonialCardComponent,
     TeamCardComponent,
-    SectionComponent
+    SectionComponent,
+    HeroCarouselComponent
   ]
 })
 export class ComponentsModule { }

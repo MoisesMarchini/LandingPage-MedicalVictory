@@ -6,3 +6,7 @@
   padding-left: calc(var(--_base-padding-x) * .5);
   padding-right: calc(var(--_base-padding-x) * .5);
 }
+
+.overflow-hidden {
+  overflow: hidden;
+}
