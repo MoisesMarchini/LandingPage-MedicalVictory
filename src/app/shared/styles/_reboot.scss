@@ -12,3 +12,26 @@ body {
 .w-100 {
   width: 100%;
 }
+
+$w-sizes: 0 33 50 75 100;
+@each $size in $w-sizes{
+  $value: $size * 1%;
+  .w-#{$size} {
+    width: #{$value};
+  }
+  @media (min-width: $md-breakpoint) {
+    .w-md-#{$size} {
+      width: #{$value} !important;
+    }
+  }
+  @media (min-width: $lg-breakpoint) {
+    .w-lg-#{$size} {
+      width: #{$value} !important;
+    }
+  }
+  @media (min-width: $xl-breakpoint) {
+    .w-xl-#{$size} {
+      width: #{$value} !important;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SectionModel } from 'src/app/shared/components/section/section.component';
 import { TeamCard } from 'src/app/shared/components/team-card/team-card.component';
 
 @Component({
@@ -7,6 +8,11 @@ import { TeamCard } from 'src/app/shared/components/team-card/team-card.componen
   styleUrls: ['./team.component.scss']
 })
 export class TeamComponent {
+  sectionModel: SectionModel = {
+    title: 'Our Team',
+    sectionName: 'Team',
+    description: "Problems trying to resolve the conflict between <br />the two major realms of Classical physics: Newtonian mechanics"
+  }
   cards: TeamCard[] =[
     {
       coverPath: 'user-cover-1.png',

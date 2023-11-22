@@ -1,11 +1,18 @@
-<section class="container" *ngIf="model">
-  <h6 class="section-name fs-14">{{ model.sectionName }}</h6>
-  <h2>{{ model.title }}</h2>
-  <p
-    *ngIf="model.description"
-    style="max-width: min(600px, 100%); line-height: 1.4"
-    class="text-secondary-text mb-section"
-    [innerHTML]="model.description"
-  ></p>
-  <ng-content select="[sectionContent]"></ng-content>
+<section [class]="'container ' + customClasses" *ngIf="model">
+  <ng-content select="[leftContent]"></ng-content>
+  <div class="content">
+    <ng-content select="[sectionBefore]"></ng-content>
+    <h6 class="section-name fs-14" *ngIf="model.sectionName">
+      {{ model.sectionName }}
+    </h6>
+    <h3>{{ model.title }}</h3>
+    <p
+      *ngIf="model.description"
+      style="max-width: min(600px, 100%); line-height: 1.4"
+      class="text-secondary-text mb-section"
+      [innerHTML]="model.description"
+    ></p>
+    <ng-content select="[sectionContent]"></ng-content>
+  </div>
+  <ng-content select="[rightContent]"></ng-content>
 </section>

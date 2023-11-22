@@ -7,10 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class SectionComponent {
   @Input() model?: SectionModel;
+  @Input() customClasses: string = '';
 }
 
 export interface SectionModel {
-  sectionName: string,
+  sectionName?: string,
   title: string,
   description?: string
 }

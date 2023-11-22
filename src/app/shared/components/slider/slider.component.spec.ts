@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeroCarouselComponent } from './hero-carousel.component';
+import { SliderComponent } from './slider.component';
 
-describe('HeroCarouselComponent', () => {
-  let component: HeroCarouselComponent;
-  let fixture: ComponentFixture<HeroCarouselComponent>;
+describe('SliderComponent', () => {
+  let component: SliderComponent;
+  let fixture: ComponentFixture<SliderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeroCarouselComponent ]
+      declarations: [ SliderComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HeroCarouselComponent);
+    fixture = TestBed.createComponent(SliderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

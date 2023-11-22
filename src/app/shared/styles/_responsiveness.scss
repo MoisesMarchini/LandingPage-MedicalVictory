@@ -5,21 +5,44 @@ $xl-breakpoint: 1240px;
 $displays: none flex block grid inline;
 @each $display in $displays {
   .d-#{$display} {
-    display: #{$display};
+    display: #{$display} !important;
   }
   @media (min-width: $md-breakpoint) {
     .d-md-#{$display} {
-      display: #{$display};
+      display: #{$display} !important;
     }
   }
   @media (min-width: $lg-breakpoint) {
     .d-lg-#{$display} {
-      display: #{$display};
+      display: #{$display} !important;
     }
   }
   @media (min-width: $xl-breakpoint) {
     .d-xl-#{$display} {
-      display: #{$display};
+      display: #{$display} !important;
+    }
+  }
+}
+
+
+$overflows: hidden auto;
+@each $overflow in $overflows {
+  .overflow-#{$overflow} {
+    overflow: #{$overflow} !important;
+  }
+  @media (min-width: $md-breakpoint) {
+    .overflow-md-#{$overflow} {
+      overflow: #{$overflow} !important;
+    }
+  }
+  @media (min-width: $lg-breakpoint) {
+    .overflow-lg-#{$overflow} {
+      overflow: #{$overflow} !important;
+    }
+  }
+  @media (min-width: $xl-breakpoint) {
+    .overflow-xl-#{$overflow} {
+      overflow: #{$overflow} !important;
     }
   }
 }
