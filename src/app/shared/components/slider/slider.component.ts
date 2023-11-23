@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
@@ -7,19 +7,26 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit, AfterViewInit{
-  loaded = false;
-  @Input() slidesAmount = 0;
+  @ViewChild('slider', {static: true}) sliderRef!: ElementRef;
   @Input() slideTimer = 5000;
-  @Input() slides: Slide[] = [];
+  @Input() slides: any[] = [];
   @Input() manualNavColor: string = 'white';
 
   manualNavArray: any[] = [];
+  isArrayOfSlideClass = false;
+  private slidesAmount = 0;
+  private slideWidth = 0;
+  private sliderScrollLeft = () => this.sliderRef.nativeElement.scrollLeft?? 0;
+
   currentSlideOnScreen = 0;
   currentSlide = 0;
   private sliderSubject = new BehaviorSubject(this.currentSlide);
   sliderSubject$ = this.sliderSubject.asObservable();
 
-  @ViewChild('slider') sliderRef?: ElementRef<HTMLDivElement>;
+  @HostListener('window:resize')
+  resizeTask(){
+    this.loadProperties();
+  }
 
   skipNext = false;
 
@@ -27,34 +34,48 @@ export class SliderComponent implements OnInit, AfterViewInit{
   }
 
   ngOnInit(): void {
+    this.isArrayOfSlideClass = this.isSlideValid(this.slides[0]);
   }
 
   ngAfterViewInit(): void {
-    if (this.sliderRef){
-      const element = this.sliderRef.nativeElement;
-
-      this.slidesAmount = Math.round(element.scrollWidth / element.clientWidth);
-      this.manualNavArray = Array(this.slidesAmount).fill(0);
-    }
-    this.loaded = true;
+    this.loadProperties();
     this.sliderSubject$.subscribe(result => {
-      result = result % this.slidesAmount;
+      const result2 = result % this.slidesAmount;
 
-      this.currentSlide = result;
-      this.moveSlider(result);
+      this.currentSlide = result2;
+      this.moveSlider(result2);
     });
 
     this.playSlider();
+  }
+
+  loadProperties() {
+    setTimeout(() => {
+      const sliderElement = this.sliderRef.nativeElement;
+      this.slideWidth = this.getSlideWidth();
+      const slidesOnScreen = sliderElement.clientWidth / this.slideWidth;
+
+      this.slidesAmount = slidesOnScreen == 1 ? this.slides.length : Math.max(this.slides.length - (slidesOnScreen - 1), 1);
+      this.manualNavArray = Array(this.slidesAmount).fill(0);
+    }, 200);
+  }
+
+  private isSlideValid(obj: any): obj is Slide {
+    return (
+      obj &&
+      typeof obj.backgroundImg === 'string' &&
+      (typeof obj.title === 'string' || obj.title === undefined) &&
+      (typeof obj.subtitle === 'string' || obj.subtitle === undefined) &&
+      (typeof obj.body === 'string' || obj.body === undefined)
+    );
   }
 
   playSlider() {
     if (!this.sliderRef)
       return;
 
-    const element = this.sliderRef.nativeElement;
-
     this.sliderRef.nativeElement.addEventListener('scroll', () => {
-      const currentSlideIndex = Math.round(element.scrollLeft / element.clientWidth);
+      const currentSlideIndex = Math.round(this.sliderScrollLeft() / this.slideWidth);
       this.currentSlideOnScreen = currentSlideIndex;
     })
 
@@ -66,7 +87,6 @@ export class SliderComponent implements OnInit, AfterViewInit{
       this.nextSlide();
     }, this.slideTimer)
   }
-
 
   nextSlide(manualTrigger = false) {
     this.skipNext = manualTrigger;
@@ -88,8 +108,7 @@ export class SliderComponent implements OnInit, AfterViewInit{
       return;
 
     const element = this.sliderRef.nativeElement;
-    const elementWidth = element.clientWidth;
-    const slidePosition = elementWidth * index;
+    const slidePosition = this.slideWidth * index;
 
     element.scrollLeft = slidePosition;
   }
@@ -99,13 +118,24 @@ export class SliderComponent implements OnInit, AfterViewInit{
       return false;
 
     const element = this.sliderRef.nativeElement;
-    const currentPosition = element.scrollLeft;
+    const currentPosition = this.sliderScrollLeft();
     const currentSlideIndex = this.currentSlideOnScreen;
-    const slidePosition = element.clientWidth * this.currentSlide;
+    const slidePosition = this.slideWidth * this.currentSlide;
 
     this.sliderSubject.next(currentSlideIndex);
 
     return Math.abs(currentPosition - slidePosition) <= 10;
+  }
+
+  private getSlideWidth() {
+    if (!this.sliderRef)
+      return 1;
+
+    const element = this.sliderRef.nativeElement;
+    const slidesElement = element.getElementsByClassName('slide');
+    const slideElement = slidesElement.item(0);
+
+    return slideElement?.clientWidth ?? 1;
   }
 }
 

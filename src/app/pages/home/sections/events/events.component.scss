@@ -1,3 +1,5 @@
+@import '/src/app/shared/styles/breakpoints';
+
 .custom-slider {
   padding-bottom: 48px;
 }
@@ -9,6 +11,20 @@
   overflow: hidden;
   flex: 0 0 auto;
   display: flex;
+  min-height: 60vh;
+  max-height: 85vh;
+}
+
+@media (min-width: $md-breakpoint) {
+  .slide {
+    width: 50% !important;
+  }
+}
+
+@media (min-width: $lg-breakpoint) {
+  .slide {
+    width: calc(100% / 3) !important;
+  }
 }
 
 .slide-content{
@@ -17,7 +33,6 @@
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  max-height: 85vh;
   border: 1px solid var(--primary);
   overflow: hidden;
 }

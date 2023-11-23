@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -73,22 +73,23 @@ a {
 @for $i from 10 through 48 {
   $value: $i;
   $baseValue: 16;
+  $size: calc($value / $baseValue);
   .fs-#{$value} {
-    font-size: #{$value / $baseValue}rem !important;
+    font-size: #{$size}rem !important;
   }
   @media (min-width: $md-breakpoint) {
     .fs-md-#{$value} {
-      font-size: #{$value / $baseValue}rem !important;
+      font-size: #{$size}rem !important;
     }
   }
   @media (min-width: $lg-breakpoint) {
     .fs-lg-#{$value} {
-      font-size: #{$value / $baseValue}rem !important;
+      font-size: #{$size}rem !important;
     }
   }
   @media (min-width: $xl-breakpoint) {
     .fs-xl-#{$value} {
-      font-size: #{$value / $baseValue}rem !important;
+      font-size: #{$size}rem !important;
     }
   }
 }

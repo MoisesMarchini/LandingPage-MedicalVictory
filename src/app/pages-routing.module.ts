@@ -4,13 +4,13 @@ import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   {
-    path: 'início',
+    path: 'inicio',
     title: 'Instituto Neurodiversidade - Início',
     component: HomeComponent,
   },
   {
     path: '**',
-    redirectTo: 'início'
+    redirectTo: 'inicio'
   }
 ];
 

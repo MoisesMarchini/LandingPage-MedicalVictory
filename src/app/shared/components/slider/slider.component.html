@@ -5,38 +5,39 @@
   <button class="d-none control control-right" (click)="nextSlide()">
     <i class="fa-solid fa-chevron-right"></i>
   </button>
-  <nav class="slider-nav" *ngIf="loaded">
-    <ul class="slider-nav-list d-flex flex-nowrap gap-2">
-      <ng-container *ngFor="let slide of manualNavArray; let i = index">
-        <li class="slider-nav-item" [style]="'--_color: ' + manualNavColor">
-          <button
-            class="slider-nav-btn"
-            [class.active]="currentSlideOnScreen === i"
-            (click)="setSlider(i)"
-          ></button>
-        </li>
+  <nav class="slider-nav" *ngIf="manualNavArray.length">
+    <ul class="slider-nav-list d-flex flex-nowrap gap-1">
+      <ng-container *ngFor="let item of manualNavArray; let i = index">
+        <li
+          class="slider-nav-item"
+          [style]="'--_color: ' + manualNavColor"
+          [class.active]="currentSlideOnScreen === i"
+          (click)="setSlider(i)"
+        ></li>
       </ng-container>
     </ul>
   </nav>
   <div #slider class="slider hide-scrollbar overflow-lg-hidden">
-    <div *ngFor="let slide of slides; let i = index" class="slide">
-      <img loading="lazy" [src]="slide.backgroundImg" class="slide-bg" />
-      <div class="container">
-        <div class="slide-content">
-          <h2
-            class="h5 text-highlight mb-2 pe-3"
-            [innerHTML]="slide.subtitle"
-          ></h2>
-          <h1 class="fs-42 fw-600 mb-2" [innerHTML]="slide.title"></h1>
-          <h4 class="fs-16 fw-500 mb-4" [innerHTML]="slide.body"></h4>
-          <a
-            href="#"
-            class="action-link btn btn-highlight text-capitalize fw-600 my-4"
-            >Fale conosco</a
-          >
+    <ng-container *ngIf="isArrayOfSlideClass">
+      <div *ngFor="let slide of slides; let i = index" class="slide">
+        <img loading="lazy" [src]="slide.backgroundImg" class="slide-bg" />
+        <div class="container">
+          <div class="slide-content">
+            <h2
+              class="h5 text-highlight mb-2 pe-3"
+              [innerHTML]="slide.subtitle"
+            ></h2>
+            <h1 class="fs-42 fw-600 mb-2" [innerHTML]="slide.title"></h1>
+            <h4 class="fs-16 fw-500 mb-4" [innerHTML]="slide.body"></h4>
+            <a
+              href="#"
+              class="action-link btn btn-highlight text-capitalize fw-600 my-4"
+              >Fale conosco</a
+            >
+          </div>
         </div>
       </div>
-    </div>
+    </ng-container>
     <ng-content select="[customSlides]"></ng-content>
   </div>
 </div>

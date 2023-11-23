@@ -38,10 +38,10 @@ export class EventsComponent {
       title: 'Matéria do Jornal Extra',
       body: 'Matéria sobre o instituto após inaugurarmos nossa segunda unidade em São João de Meriti'
     },
-    {
-      backgroundPath: 'https://oinstitutoneurodiversidade.com.br/wp-content/uploads/2023/02/7-editada.jpg',
-      title: 'Matéria do Jornal Extra',
-      body: 'Matéria sobre o instituto após inaugurarmos nossa segunda unidade em São João de Meriti'
-    },
+    // {
+    //   backgroundPath: 'https://oinstitutoneurodiversidade.com.br/wp-content/uploads/2023/02/7-editada.jpg',
+    //   title: 'Matéria do Jornal Extra',
+    //   body: 'Matéria sobre o instituto após inaugurarmos nossa segunda unidade em São João de Meriti'
+    // },
   ]
 }

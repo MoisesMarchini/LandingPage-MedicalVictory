@@ -3,10 +3,11 @@
     rightContent
     [manualNavColor]="'var(--primary)'"
     [slideTimer]="8000"
+    [slides]="slides"
   >
-    <div customSlides class="custom-slider d-flex flex-nowrap">
+    <div customSlides class="custom-slider w-100 d-flex flex-nowrap">
       <ng-container *ngFor="let slide of slides">
-        <div class="slide w-100 w-lg-50">
+        <div class="slide w-100">
           <div class="slide-content">
             <div class="slide-img-wrapper">
               <img [src]="slide.backgroundPath" class="slide-img" />
