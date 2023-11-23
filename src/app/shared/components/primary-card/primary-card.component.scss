@@ -8,6 +8,7 @@
   height: 100%;
   cursor: pointer;
   border: 1px solid #efefef;
+  transition: .3s;
   > * {
     margin: 0;
   }
@@ -25,8 +26,10 @@
     background-color: var(--highlight);
     border: none;
     margin-left: 0;
+    transition: width .3s;
   }
-  > .card-body {
+  > .card-body, > .card-title {
+    transition: none;
     max-width: 80%;
   }
 }
@@ -40,8 +43,9 @@
   }
   > .card-divider {
     background-color: var(--white);
+    width: 100%;
   }
-  > .card-body {
+  > .card-body, > .card-title {
     color: var(--white);
   }
 }
