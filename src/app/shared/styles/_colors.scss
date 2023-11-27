@@ -4,6 +4,8 @@ $external-bg: #252F3D;
 $blue: #0061FF;
 $shiny: #F3CD03;
 $primary: #0988C3;
+$primary-light: #f6fbff;
+$primary-dark: #071066;
 $highlight: #ff7f02;
 $dark: #26335D;
 $muted: #BDBDBD;
@@ -20,6 +22,8 @@ $all-colors: (
   'blue': $blue,
   'shiny': $shiny,
   'primary': $primary,
+  'primary-dark': $primary-dark,
+  'primary-light': $primary-light,
   'highlight': $highlight,
   'dark': $dark,
   'muted': $muted,

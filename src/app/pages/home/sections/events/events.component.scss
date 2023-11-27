@@ -31,8 +31,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  border-radius: 8px;
-  border: 1px solid var(--primary);
+  // border-radius: 8px;
+  border: 1px solid var(--primary-dark);
   overflow: hidden;
 }
 
@@ -49,20 +49,20 @@
 
 .slide-body {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  bottom: 1px;
+  left: 1px;
+  right: 1px;
   padding: 16px;
-  background-color: var(--primary);
+  background-color: var(--primary-dark);
   color: white;
   &::before {
     content: "";
     position: absolute;
-    background: linear-gradient(transparent, var(--primary));
+    background: linear-gradient(transparent, var(--primary-dark));
     top: 0;
     left: 0;
     right: 0;
-    height: 48px;
+    height: 100%;
     transform: translateY(-100%);
   }
 }

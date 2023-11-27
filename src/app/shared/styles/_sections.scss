@@ -1,4 +1,4 @@
-section, .section {
+.section-container {
   --_base-padding-y: 3rem;
   --_section-spacing-top: calc(7vmin + (var(--_base-padding-y) * .5));
   &:not(header){

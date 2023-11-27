@@ -1,25 +1,27 @@
-<section
-  class="container text-center d-flex flex-column align-items-center my-section"
->
-  <h6 class="section-name">Newsletter</h6>
-  <h2>JOIN US</h2>
-  <p class="text-secondary-text mb-section mx-auto">
-    Problems trying to resolve the conflict between <br />
-    the two major realms of Classical physics: Newtonian mechanics
-  </p>
-  <form
-    #subscribeForm="ngForm"
-    (ngSubmit)="onSubmit(subscribeForm)"
-    class="subscribe-form d-flex w-100"
+<section>
+  <div
+    class="section-container container text-center d-flex flex-column align-items-center my-section"
   >
-    <input
-      type="email"
-      name="email"
-      placeholder="Your Email"
-      class="flex-grow-1"
-      required
-      ngModel
-    />
-    <button type="submit" class="btn btn-primary">Subscribe</button>
-  </form>
+    <h6 class="section-name">Newsletter</h6>
+    <h2>JOIN US</h2>
+    <p class="text-secondary-text mb-section mx-auto">
+      Problems trying to resolve the conflict between <br />
+      the two major realms of Classical physics: Newtonian mechanics
+    </p>
+    <form
+      #subscribeForm="ngForm"
+      (ngSubmit)="onSubmit(subscribeForm)"
+      class="subscribe-form d-flex w-100"
+    >
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        class="flex-grow-1"
+        required
+        ngModel
+      />
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+  </div>
 </section>

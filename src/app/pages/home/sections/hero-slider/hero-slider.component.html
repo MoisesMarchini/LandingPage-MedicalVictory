@@ -1,1 +1,23 @@
-<app-slider [slides]="slides"></app-slider>
+<app-slider [slides]="slides">
+  <div
+    customSlides
+    class="custom-slider w-100 d-flex flex-nowrap"
+    [style]="'--_nav-height: ' + getHeaderNavHeight()"
+  >
+    <ng-container *ngFor="let slide of slides">
+      <div class="slide w-100">
+        <div class="slide-bg-img-wrapper">
+          <img [src]="slide.backgroundImg" class="slide-bg-img" />
+        </div>
+        <div class="slide-content container">
+          <div class="slide-body">
+            <h1 [innerHTML]="slide.title"></h1>
+            <h5 [innerHTML]="slide.subtitle"></h5>
+            <p [innerHTML]="slide.body"></p>
+            <a href="#" class="btn btn-highlight">Fale Conosco</a>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</app-slider>

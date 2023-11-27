@@ -13,4 +13,18 @@ export class OurDepartmentComponent {
     title: 'Marque sua Consulta',
     description: "Para agendar sua visita ou consulta, <br>basta clicar na unidade mais próxima e falar conosco via Whatsapp."
   }
+  departments = [
+    {
+      city: 'Queimados',
+      adress: 'Rua Santa Rita, 295 – Pacaembú',
+      wppChat: '',
+      gmaps: ''
+    },
+    {
+      city: 'São João de Meriti',
+      adress: 'Rua Campos, 67 – Vila São João',
+      wppChat: '',
+      gmaps: ''
+    }
+  ]
 }

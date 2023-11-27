@@ -9,9 +9,9 @@ import { TestimonialCard } from 'src/app/shared/components/testimonial-card/test
 })
 export class TestimonialsComponent {
   sectionModel: SectionModel = {
-    title: 'The Best Reference',
-    sectionName: 'Courses',
-    description: "Problems trying to resolve the conflict between <br />the two major realms of Classical physics: Newtonian mechanics"
+    title: 'Histórias que Inspiram',
+    sectionName: 'Depoimentos e Avaliações',
+    description: "Conheça algumas experiências reais e transformadoras de famílias e crianças que encontraram apoio e evolução com nossos serviços."
   }
   cards: TestimonialCard[] = [
     {

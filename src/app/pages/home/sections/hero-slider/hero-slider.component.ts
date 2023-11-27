@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { getHeaderNavHeight } from '../../../../shared/helpers/functions';
 
 @Component({
   selector: 'app-hero-slider',
@@ -31,4 +32,6 @@ export class HeroSliderComponent {
       }
     }
   ]
+
+  getHeaderNavHeight = () => getHeaderNavHeight();
 }

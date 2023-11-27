@@ -7,7 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class SectionComponent {
   @Input() model?: SectionModel;
-  @Input() customClasses: string = '';
+  @Input() customSectionClasses: string = '';
+  @Input() customContainerClasses: string = '';
 }
 
 export interface SectionModel {

@@ -1,20 +1,41 @@
-<header class="d-flex flex-column overflow-hidden">
+<header id="header" class="d-flex" [class.is-over-slider]="overSlider">
   <nav
-    class="d-flex align-items-center container text-bg-white fs-14 fw-600 py-3"
+    id="header-nav"
+    class="d-flex align-items-center container overflow-hidden text-bg-white fs-14 fw-600 py-3"
   >
     <h1 class="brand-name fs-18 m-0">Instituto <br />Neurodiversidade</h1>
     <ul class="d-none d-lg-flex align-items-center nav-list gap-5 ms-auto mx-8">
       <li class="nav-list-item">
-        <a href="#" class="nav-item-link">Início</a>
+        <a
+          [routerLink]="['/inicio']"
+          routerLinkActive="active"
+          class="nav-item-link"
+          >Início</a
+        >
       </li>
       <li class="nav-list-item">
-        <a href="#" class="nav-item-link">Sobre nós</a>
+        <a
+          [routerLink]="['/sobre']"
+          routerLinkActive="active"
+          class="nav-item-link"
+          >Sobre nós</a
+        >
       </li>
       <li class="nav-list-item">
-        <a href="#" class="nav-item-link">Serviços</a>
+        <a
+          [routerLink]="['/servicos']"
+          routerLinkActive="active"
+          class="nav-item-link"
+          >Serviços</a
+        >
       </li>
       <li class="nav-list-item">
-        <a href="#" class="nav-item-link">Loja</a>
+        <a
+          [routerLink]="['/loja']"
+          routerLinkActive="active"
+          class="nav-item-link"
+          >Loja</a
+        >
       </li>
     </ul>
   </nav>

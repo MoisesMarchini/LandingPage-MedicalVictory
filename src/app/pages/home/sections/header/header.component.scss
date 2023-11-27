@@ -3,10 +3,31 @@ header {
   box-shadow: 0px 0px 16px var(--black);
   z-index: 10;
   position: relative;
+  color: black;
   > nav {
-    color: black;
-    min-height: 68px;
-    height: 68px;
+    height: 80px;
     z-index: 10;
+  }
+}
+
+header.is-over-slider {
+  border-bottom: none;
+  box-shadow: none;
+  margin-bottom: -80px;
+  color: white;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 30px);
+    background: linear-gradient(var(--primary-dark), transparent);
+  }
+}
+
+.nav-item-link {
+  opacity: .8;
+  &.active {
+    opacity: 1;
+    color: var(--highlight);
   }
 }

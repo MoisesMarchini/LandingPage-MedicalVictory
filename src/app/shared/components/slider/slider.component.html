@@ -18,7 +18,7 @@
     </ul>
   </nav>
   <div #slider class="slider hide-scrollbar overflow-lg-hidden">
-    <ng-container *ngIf="isArrayOfSlideClass">
+    <!-- <ng-container *ngIf="isArrayOfSlideClass">
       <div *ngFor="let slide of slides; let i = index" class="slide">
         <img loading="lazy" [src]="slide.backgroundImg" class="slide-bg" />
         <div class="container">
@@ -37,7 +37,7 @@
           </div>
         </div>
       </div>
-    </ng-container>
+    </ng-container> -->
     <ng-content select="[customSlides]"></ng-content>
   </div>
 </div>

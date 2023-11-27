@@ -11,6 +11,7 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { OurServicesComponent } from './our-services/our-services.component';
 import { HeroSliderComponent } from './hero-slider/hero-slider.component';
 import { EventsComponent } from './events/events.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -27,6 +28,7 @@ import { EventsComponent } from './events/events.component';
     EventsComponent
   ],
   imports: [
+    RouterModule,
     CommonModule,
     SharedModule,
     FormsModule
