@@ -1,0 +1,18 @@
+@import '/src/app/shared/styles/breakpoints';
+
+.custom-slider {
+  margin: 0 auto;
+  padding: 58px 0;
+}
+
+.slide{
+  position: relative;
+  scroll-snap-align: start;
+  flex: 0 0 100%;
+}
+
+@media (min-width: $md-breakpoint) {
+  .slide {
+    flex: 0 0 50%;
+  }
+}

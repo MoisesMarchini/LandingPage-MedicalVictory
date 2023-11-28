@@ -1,4 +1,4 @@
-@for $i from 0 through 10 {
+@for $i from 0 through 20 {
   $value: $i;
   $margin-value: $value * calc(1 / 4);
   .m-#{$value} {
@@ -23,6 +23,33 @@
   }
   .mt-#{$value} {
     margin-top: #{$margin-value}rem;
+  }
+  @each $breakpoint-name, $breakpoint-value in $breakpoints {
+    @media (min-width: $breakpoint-value) {
+      .m-#{$breakpoint-name}-#{$value} {
+        margin: #{$margin-value}rem;
+      }
+      .mx-#{$breakpoint-name}-#{$value} {
+        margin-right: #{$margin-value}rem;
+        margin-left: #{$margin-value}rem;
+      }
+      .my-#{$breakpoint-name}-#{$value} {
+        margin-top: #{$margin-value}rem;
+        margin-bottom: #{$margin-value}rem;
+      }
+      .me-#{$breakpoint-name}-#{$value} {
+        margin-right: #{$margin-value}rem;
+      }
+      .ms-#{$breakpoint-name}-#{$value} {
+        margin-left: #{$margin-value}rem;
+      }
+      .mb-#{$breakpoint-name}-#{$value} {
+        margin-bottom: #{$margin-value}rem;
+      }
+      .mt-#{$breakpoint-name}-#{$value} {
+        margin-top: #{$margin-value}rem;
+      }
+    }
   }
 }
 

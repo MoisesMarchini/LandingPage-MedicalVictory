@@ -1,9 +1,32 @@
 .card {
-  > img.testimonial-img {
-    width: 128px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  > .testimonial-img-wrapper{
+    background-color: var(--primary-text);
+    display: grid;
+    place-content: center;
+    font-size: 24px;
+    color: white;
+    position: relative;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    overflow: hidden;
+    flex: 0 0 auto;
+    > img.testimonial-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   > p.testimonial-body {
     max-width: 320px;
   }
+}
+
+.testimonial-review > img {
+  width: 14px;
+  height: 14px;
 }

@@ -9,6 +9,9 @@ import { BehaviorSubject } from 'rxjs';
 export class SliderComponent implements OnInit, AfterViewInit{
   @ViewChild('slider', {static: true}) sliderRef!: ElementRef;
   @Input() slideTimer = 5000;
+  @Input() hideControl = false;
+  @Input() controlMargin = false;
+  @Input() circleControl = false;
   @Input() slides: any[] = [];
   @Input() manualNavColor: string = 'white';
 
@@ -56,7 +59,8 @@ export class SliderComponent implements OnInit, AfterViewInit{
       const slidesOnScreen = sliderElement.clientWidth / this.slideWidth;
 
       this.slidesAmount = slidesOnScreen == 1 ? this.slides.length : Math.max(this.slides.length - (slidesOnScreen - 1), 1);
-      this.manualNavArray = Array(this.slidesAmount).fill(0);
+
+      this.manualNavArray = Array(Math.ceil(this.slidesAmount)).fill(0);
     }, 200);
   }
 
@@ -95,7 +99,8 @@ export class SliderComponent implements OnInit, AfterViewInit{
 
   prevSlide(manualTrigger = false) {
     this.skipNext = manualTrigger;
-    this.sliderSubject.next(this.currentSlide - 1);
+    const prevSlide = this.currentSlide - 1;
+    this.sliderSubject.next(prevSlide >= 0? prevSlide : this.slidesAmount - 1);
   }
 
   setSlider(index: number) {

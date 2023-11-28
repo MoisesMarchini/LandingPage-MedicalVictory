@@ -1,3 +1,9 @@
 $md-breakpoint: 768px;
 $lg-breakpoint: 1024px;
 $xl-breakpoint: 1240px;
+
+$breakpoints: (
+  'md': $md-breakpoint,
+  'lg': $lg-breakpoint,
+  'xl': $xl-breakpoint
+);

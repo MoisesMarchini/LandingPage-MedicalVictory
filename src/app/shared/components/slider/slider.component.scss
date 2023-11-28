@@ -1,25 +1,50 @@
+:host {
+  display: block;
+}
 
 .slider-wrapper {
   --_control-width: clamp( 32px, 15%, 80px);
   position: relative;
-  overflow: hidden;
   display: grid;
+  &.hide-control .control{
+    display: none;
+  }
+  &.circle-control .control{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    opacity: 1;
+    background-color: white;
+    color: inherit;
+    text-shadow: none;
+    line-height: 0;
+    box-shadow: var(--card-shadow-sm);
+  }
   .control {
     background-color: transparent;
-    color: white;
+    color: var(--_color);
     font-size: 2rem;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    height: 50%;
+    top: 50%;
     width: var(--_control-width);
     z-index: 10;
     border: none;
-  }
-  .control-left {
-    left: 0;
-  }
-  .control-right {
-    right: 0;
+    opacity: .5;
+    text-shadow: var(--card-shadow-sm);
+    cursor: pointer;
+    transition: opacity .3s;
+    &.control-left {
+      left: 0;
+      transform: translate(-50%, -50%);
+    }
+    &.control-right {
+      right: 0;
+      transform: translate(50%, -50%);
+    }
+    &:hover{
+      opacity: 1;
+    }
   }
   .slider {
     overflow: auto;
@@ -27,6 +52,9 @@
     flex-wrap: nowrap;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    &.control-margin {
+      margin: 0 var(--_control-width);
+    }
   }
 }
 

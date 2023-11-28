@@ -10,6 +10,15 @@ body {
   font-size: calc(var(--font-size) * 1px);
 }
 
+$font-families: 'Montserrat' 'Lato';
+@each $font-family in $font-families {
+  $font-class: to-lower-case($font-family);
+  .font-#{$font-class} {
+    font-family: #{$font-family}, sans-serif;
+  }
+}
+
+
 @media (min-width: $md-breakpoint) {
   :root {
     --font-size: 16;

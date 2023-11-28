@@ -1,8 +1,27 @@
 <app-section [model]="sectionModel">
-  <div sectionContent class="d-grid grid-col-md-2 grid-col-1" style="gap: 24px">
+  <!-- <div sectionContent class="d-grid grid-col-md-2 grid-col-1" style="gap: 24px">
     <app-testimonial-card
       *ngFor="let card of cards"
       [card]="card"
     ></app-testimonial-card>
-  </div>
+  </div> -->
+
+  <app-slider
+    sectionContent
+    [manualNavColor]="'var(--primary)'"
+    [slideTimer]="7000"
+    [slides]="cards"
+  >
+    <div
+      customSlides
+      class="custom-slider w-100 d-flex flex-nowrap align-items-center"
+    >
+      <div class=""></div>
+      <app-testimonial-card
+        class="slide"
+        *ngFor="let card of cards"
+        [card]="card"
+      ></app-testimonial-card>
+    </div>
+  </app-slider>
 </app-section>

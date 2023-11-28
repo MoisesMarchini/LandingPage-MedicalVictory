@@ -1,21 +1,27 @@
-<div class="card text-center d-flex flex-column align-items-center p-5 mx-5">
-  <img [src]="rootImgsPath + card.coverPath" class="testimonial-img mb-5" />
-  <p class="testimonial-body mb-5">
-    {{ card.body }}
-  </p>
-  <div class="testimonial-review mb-5">
-    <ng-container *ngFor="let reviewStars of reviewArray">
-      <img
-        [src]="
-          reviewStars < card.review ? starImgPath.filled : starImgPath.empty
-        "
-      />
-    </ng-container>
+<div class="card d-flex align-items-start p-5 mx-4 card-shadow">
+  <div class="testimonial-img-wrapper">
+    <span>{{ card.title.charAt(0) }}</span>
+    <img
+      *ngIf="card.coverPath"
+      [src]="rootImgsPath + card.coverPath"
+      class="testimonial-img"
+    />
   </div>
-  <h5 class="testimonial-title">
-    {{ card.title }}
-  </h5>
-  <h6 class="testimonial-subtitle text-muted">
-    {{ card.subtitle }}
-  </h6>
+  <div class="card-content ms-2 d-flex flex-column">
+    <h5 class="testimonial-title fs-14 m-0">
+      {{ card.title }}
+    </h5>
+    <div class="testimonial-review my-1">
+      <ng-container *ngFor="let reviewStars of reviewArray">
+        <img
+          [src]="
+            reviewStars < card.review ? starImgPath.filled : starImgPath.empty
+          "
+        />
+      </ng-container>
+    </div>
+    <p class="testimonial-body">
+      {{ card.body }}
+    </p>
+  </div>
 </div>

@@ -1,8 +1,13 @@
-<div class="slider-wrapper">
-  <button class="d-none control control-left" (click)="prevSlide()">
+<div
+  class="slider-wrapper"
+  [style]="'--_color: ' + manualNavColor"
+  [class.hide-control]="hideControl"
+  [class.circle-control]="circleControl"
+>
+  <button class="control control-left" (click)="prevSlide(true)">
     <i class="fa-solid fa-chevron-left"></i>
   </button>
-  <button class="d-none control control-right" (click)="nextSlide()">
+  <button class="control control-right" (click)="nextSlide(true)">
     <i class="fa-solid fa-chevron-right"></i>
   </button>
   <nav class="slider-nav" *ngIf="manualNavArray.length">
@@ -10,14 +15,17 @@
       <ng-container *ngFor="let item of manualNavArray; let i = index">
         <li
           class="slider-nav-item"
-          [style]="'--_color: ' + manualNavColor"
           [class.active]="currentSlideOnScreen === i"
           (click)="setSlider(i)"
         ></li>
       </ng-container>
     </ul>
   </nav>
-  <div #slider class="slider hide-scrollbar overflow-lg-hidden">
+  <div
+    #slider
+    class="slider hide-scrollbar overflow-lg-hidden"
+    [class.control-margin]="controlMargin"
+  >
     <!-- <ng-container *ngIf="isArrayOfSlideClass">
       <div *ngFor="let slide of slides; let i = index" class="slide">
         <img loading="lazy" [src]="slide.backgroundImg" class="slide-bg" />

@@ -24,4 +24,31 @@
   .pt-#{$value} {
     padding-top: #{$padding-value}rem !important;
   }
+  @each $breakpoint-name, $breakpoint-value in $breakpoints {
+    @media (min-width: $breakpoint-value) {
+      .p-#{$breakpoint-name}-#{$value} {
+        padding: #{$padding-value}rem !important;
+      }
+      .px-#{$breakpoint-name}-#{$value} {
+        padding-right: #{$padding-value}rem !important;
+        padding-left: #{$padding-value}rem !important;
+      }
+      .py-#{$breakpoint-name}-#{$value} {
+        padding-top: #{$padding-value}rem !important;
+        padding-bottom: #{$padding-value}rem !important;
+      }
+      .pe-#{$breakpoint-name}-#{$value} {
+        padding-right: #{$padding-value}rem !important;
+      }
+      .ps-#{$breakpoint-name}-#{$value} {
+        padding-left: #{$padding-value}rem !important;
+      }
+      .pb-#{$breakpoint-name}-#{$value} {
+        padding-bottom: #{$padding-value}rem !important;
+      }
+      .pt-#{$breakpoint-name}-#{$value} {
+        padding-top: #{$padding-value}rem !important;
+      }
+    }
+  }
 }

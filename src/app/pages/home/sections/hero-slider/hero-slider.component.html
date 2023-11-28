@@ -1,4 +1,4 @@
-<app-slider [slides]="slides">
+<app-slider [slides]="slides" [hideControl]="true">
   <div
     customSlides
     class="custom-slider w-100 d-flex flex-nowrap"
@@ -14,7 +14,7 @@
             <h1 [innerHTML]="slide.title"></h1>
             <h5 [innerHTML]="slide.subtitle"></h5>
             <p [innerHTML]="slide.body"></p>
-            <a href="#" class="btn btn-highlight">Fale Conosco</a>
+            <a href="#" class="btn btn-highlight mt-3 fw-600">Fale Conosco</a>
           </div>
         </div>
       </div>
