@@ -1,7 +1,7 @@
 $displays: none flex block grid inline;
 @each $display in $displays {
   .d-#{$display} {
-    display: #{$display} !important;
+    display: #{$display};
   }
   @media (min-width: $md-breakpoint) {
     .d-md-#{$display} {

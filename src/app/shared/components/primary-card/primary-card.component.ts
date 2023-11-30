@@ -13,7 +13,9 @@ export class PrimaryCardComponent {
 }
 
 export interface PrimaryCard {
+  bgImgPath?: string,
   iconPath?: string,
+  fontawesomeIcon?: string,
   title: string,
   body?: string,
   active: boolean

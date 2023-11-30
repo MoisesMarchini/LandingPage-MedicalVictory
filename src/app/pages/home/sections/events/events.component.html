@@ -8,7 +8,8 @@
   >
     <div customSlides class="custom-slider w-100 d-flex flex-nowrap">
       <ng-container *ngFor="let slide of slides">
-        <div class="slide w-100 p-4 p-md-4">
+        <app-secondary-card [model]="slide" class="slide"></app-secondary-card>
+        <!-- <div class="slide w-100 p-4 p-md-4">
           <div class="slide-content">
             <div class="slide-img-wrapper">
               <img [src]="slide.backgroundPath" class="slide-img" />
@@ -18,7 +19,7 @@
               <p [innerHTML]="slide.body"></p>
             </div>
           </div>
-        </div>
+        </div> -->
       </ng-container>
     </div>
   </app-slider>

@@ -7,5 +7,5 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./fixed-wpp-btn.component.scss']
 })
 export class FixedWppBtnComponent {
-  socialMediaLinks = environment.socialMediaLinks;
+  wppChat = environment.departmentLinks.Queimados;
 }

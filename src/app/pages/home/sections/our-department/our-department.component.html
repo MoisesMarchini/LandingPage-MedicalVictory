@@ -9,16 +9,18 @@
     <ng-container *ngFor="let department of departments">
       <div class="card-department d-flex gap-1 p-2 card-shadow">
         <div class="card-content ms-1 flex-grow-1">
-          <h6 class="city fs-16">
-            {{ department.city }}
-          </h6>
+          <a [href]="department.wppChat">
+            <h6 class="city fs-16">
+              {{ department.city }}
+            </h6>
+          </a>
           <p class="adress fw-600 fs-12">
             <i class="fa-solid fa-location-dot me-1"></i>
             {{ department.adress }}
           </p>
         </div>
         <div class="card-links d-flex gap-1">
-          <a href="#">
+          <a [href]="department.wppChat">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
         </div>

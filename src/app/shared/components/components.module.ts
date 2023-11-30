@@ -10,6 +10,8 @@ import { RouterModule } from '@angular/router';
 import { FixedWppBtnComponent } from './fixed-wpp-btn/fixed-wpp-btn.component';
 import { ImageWrapperComponent } from './image-wrapper/image-wrapper.component';
 import { FooterComponent } from './footer/footer.component';
+import { ServiceBigCardComponent } from './service-big-card/service-big-card.component';
+import { SecondaryCardComponent } from './secondary-card/secondary-card.component';
 
 
 
@@ -23,7 +25,9 @@ import { FooterComponent } from './footer/footer.component';
     SliderComponent,
     FixedWppBtnComponent,
     FooterComponent,
-    ImageWrapperComponent
+    ImageWrapperComponent,
+    ServiceBigCardComponent,
+    SecondaryCardComponent
   ],
   imports: [
     RouterModule,
@@ -38,7 +42,9 @@ import { FooterComponent } from './footer/footer.component';
     SliderComponent,
     FixedWppBtnComponent,
     FooterComponent,
-    ImageWrapperComponent
+    ImageWrapperComponent,
+    ServiceBigCardComponent,
+    SecondaryCardComponent
   ]
 })
 export class ComponentsModule { }

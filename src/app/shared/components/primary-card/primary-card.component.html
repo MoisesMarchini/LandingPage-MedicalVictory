@@ -1,12 +1,28 @@
-<div class="card card-shadow" [class.active]="card.active">
-  <div *ngIf="card.iconPath" class="card-icon">
-    <img [src]="card.iconPath" [alt]="card.title" />
+<div
+  class="card card-shadow-sm"
+  [class.has-bg-img]="!!card.bgImgPath"
+  [class.active]="card.active"
+  [style]="
+    card.bgImgPath ? 'background-image: url(' + card.bgImgPath + ')' : ''
+  "
+>
+  <div *ngIf="card.iconPath || card.fontawesomeIcon" class="card-icon-wrapper">
+    <i
+      *ngIf="card.fontawesomeIcon"
+      [class]="'card-icon ' + card.fontawesomeIcon"
+    ></i>
+    <img
+      *ngIf="card.iconPath"
+      class="card-icon"
+      [src]="card.iconPath"
+      [alt]="card.title"
+    />
   </div>
-  <hr class="card-divider" />
+  <!-- <hr class="card-divider" /> -->
   <h5 class="card-title fs-14">
     {{ card.title }}
   </h5>
-  <p *ngIf="card.body" class="card-body fw-500 text-secondary-text">
+  <!-- <p *ngIf="card.body" class="card-body fw-500 text-secondary-text">
     {{ card.body }}
-  </p>
+  </p> -->
 </div>

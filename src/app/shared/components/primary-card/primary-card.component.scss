@@ -1,24 +1,42 @@
 .card {
-  padding: 16px;
-  background-color: var(--white);
+  overflow: hidden;
+  position: relative;
+  padding: 24px 16px 16px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 8px;
-  min-height: 80px;
   height: 100%;
   cursor: pointer;
-  border: 1px solid #efefef;
-  transition: .3s;
+  border-radius: 8px;
+  transition: 0.3s;
+  &.has-bg-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--base-text);
+    opacity: .7;
+    transition: .3s;
+    pointer-events: none;
+  }
   > * {
+    z-index: 0;
     margin: 0;
   }
-  > .card-icon {
-    width: 75px;
+  > .card-icon-wrapper {
+    width: 48px;
+    font-size: 24px;
     aspect-ratio: 1;
     display: grid;
     place-items: center;
-    border-radius: 10px;
-    background-color: var(--border-color)
+    border-radius: 50%;
+    background-color: var(--white)
   }
   > .card-divider {
     width: 50px;
@@ -29,23 +47,28 @@
     transition: width .3s;
   }
   > .card-body, > .card-title {
+    color: var(--white);
     transition: none;
-    max-width: 80%;
+  }
+  > .card-title {
+    line-height: 1.3;
+    height: calc(2 * 1.3em);
+    display: flex;
+    align-items: center;
   }
 }
 
 .card.active, .card:hover {
   border-color: var(--highlight);
   background-color: var(--highlight);
-  color: var(--white);
-  > .card-icon {
+  &::before {
+    opacity: .9;
+  }
+  > .card-icon-wrapper {
     background-color: var(--white);
   }
   > .card-divider {
     background-color: var(--white);
     width: 100%;
-  }
-  > .card-body, > .card-title {
-    color: var(--white);
   }
 }

@@ -1,8 +1,14 @@
 <app-section [model]="sectionModel">
-  <div sectionContent class="d-grid grid-col-lg-4 grid-col-2 mt-section" style="gap: 16px">
+  <div
+    sectionContent
+    class="d-grid grid-col-lg-6 grid-col-md-4 grid-col-2 mt-section"
+    style="gap: 16px"
+  >
     <app-primary-card
       *ngFor="let card of cards"
       [card]="card"
+      (click)="showBigCard(card)"
     ></app-primary-card>
   </div>
 </app-section>
+<app-service-big-card></app-service-big-card>

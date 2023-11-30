@@ -50,7 +50,7 @@ export class SliderComponent implements OnInit, AfterViewInit{
     });
 
     this.playSlider();
-    this.currentSlide = 0;
+    this.currentSlide = this.currentSlideOnScreen = 0;
   }
 
   loadProperties() {
@@ -95,12 +95,12 @@ export class SliderComponent implements OnInit, AfterViewInit{
 
   nextSlide(manualTrigger = false) {
     this.skipNext = manualTrigger;
-    this.sliderSubject.next(this.currentSlide + 1);
+    this.sliderSubject.next(this.currentSlideOnScreen + 1);
   }
 
   prevSlide(manualTrigger = false) {
     this.skipNext = manualTrigger;
-    const prevSlide = this.currentSlide - 1;
+    const prevSlide = this.currentSlideOnScreen - 1;
     this.sliderSubject.next(prevSlide >= 0? prevSlide : this.slidesAmount - 1);
   }
 

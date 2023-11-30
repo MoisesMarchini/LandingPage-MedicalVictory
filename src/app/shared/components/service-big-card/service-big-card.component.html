@@ -1,0 +1,28 @@
+<span class="black-overlay" (click)="close()"> </span>
+<div
+  class="card container p-0 bg-white card-shadow-sm d-grid grid-col-md-2 grid-col-1 align-items-center"
+>
+  <button class="close-btn" (click)="close()">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+  <div class="img-container d-grid">
+    <img class="bg-img" [src]="model?.bgPath" alt="" srcset="" />
+  </div>
+  <div class="card-content px-8 pb-8 pt-md-8">
+    <hr class="section-divider" />
+    <h3>{{ model?.title }}</h3>
+    <p
+      *ngIf="model?.body"
+      style="line-height: 1.5"
+      class="mb-8 fw-500"
+      [innerHTML]="model?.body"
+    ></p>
+    <a
+      [href]="model?.externalLink"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="card-link btn btn-highlight me-auto fw-700"
+      >Marcar Consulta</a
+    >
+  </div>
+</div>
