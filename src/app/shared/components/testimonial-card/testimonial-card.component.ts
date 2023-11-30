@@ -21,9 +21,9 @@ export class TestimonialCardComponent {
   }
 }
 export interface TestimonialCard {
-  title: string,
+  title?: string,
   subtitle?: string,
-  body: string,
-  review: 0 | 1 | 2 | 3 | 4 | 5,
+  body?: string,
+  review?: 0 | 1 | 2 | 3 | 4 | 5,
   coverPath?: string
 }

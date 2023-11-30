@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SectionModel } from 'src/app/shared/components/section/section.component';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-our-department',
@@ -7,7 +8,7 @@ import { SectionModel } from 'src/app/shared/components/section/section.componen
   styleUrls: ['./our-department.component.scss']
 })
 export class OurDepartmentComponent {
-  rightSideImg = '/assets/sections/our-department/section-thumb.png';
+  rightSideImg = '/assets/sections/our-department/section-thumb.jpg';
   sectionModel: SectionModel = {
     sectionName: 'Nossas Unidades',
     title: 'Marque sua Consulta',
@@ -17,13 +18,13 @@ export class OurDepartmentComponent {
     {
       city: 'Queimados',
       adress: 'Rua Santa Rita, 295 – Pacaembú',
-      wppChat: '',
+      wppChat: environment.departmentLinks['Queimados'],
       gmaps: ''
     },
     {
       city: 'São João de Meriti',
       adress: 'Rua Campos, 67 – Vila São João',
-      wppChat: '',
+      wppChat: environment.departmentLinks['SaoJoaoDeMeriti'],
       gmaps: ''
     }
   ]

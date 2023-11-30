@@ -41,6 +41,7 @@ export class TestimonialsComponent {
       body: "Atendimento excelente, da recepção aos terapeutas,todo bem simpáticos e educados.<br>Mais que uma clinica uma família<br>Na qual estou muito satisfeita e feliz em fazer parte. Deus abençoe cada de vcs!!!",
       review: 5,
     },
+    {}
     // {
     //   title: 'Danielle Ferreira',
     //   body: "Instituto incrível,com grande empatia desde a secretaria até os antendimentos com os terapeutas. cafezinho de primeira rs fono Suzane linda e incrível trabalha com meus gêmeos e o resultado no desenvolvimento na fala é nítido , nada a reclamar só agradecer.",
@@ -52,4 +53,5 @@ export class TestimonialsComponent {
     //   review: 5,
     // },
   ]
+  mobileCards = this.cards.slice(0, this.cards.length - 1);
 }

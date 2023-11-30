@@ -1,27 +1,27 @@
-<div class="card d-flex align-items-start p-5 mx-4 card-shadow">
-  <div class="testimonial-img-wrapper">
-    <span>{{ card.title.charAt(0) }}</span>
-    <img
-      *ngIf="card.coverPath"
-      [src]="rootImgsPath + card.coverPath"
-      class="testimonial-img"
-    />
-  </div>
-  <div class="card-content ms-2 d-flex flex-column">
-    <h5 class="testimonial-title fs-14 m-0">
-      {{ card.title }}
-    </h5>
-    <div class="testimonial-review my-1">
-      <ng-container *ngFor="let reviewStars of reviewArray">
-        <img
-          [src]="
-            reviewStars < card.review ? starImgPath.filled : starImgPath.empty
-          "
-        />
-      </ng-container>
+<ng-container *ngIf="card.title && card.review">
+  <div class="card d-flex align-items-start p-5 mx-4 card-shadow">
+    <div class="testimonial-img-wrapper">
+      <span>{{ card.title.charAt(0) }}</span>
+      <img
+        *ngIf="card.coverPath"
+        [src]="rootImgsPath + card.coverPath"
+        class="testimonial-img"
+      />
     </div>
-    <p class="testimonial-body">
-      {{ card.body }}
-    </p>
+    <div class="card-content ms-2 d-flex flex-column">
+      <h5 class="testimonial-title fs-14 m-0">
+        {{ card.title }}
+      </h5>
+      <div class="testimonial-review my-1">
+        <ng-container *ngFor="let reviewStars of reviewArray">
+          <img
+            [src]="
+              reviewStars < card.review ? starImgPath.filled : starImgPath.empty
+            "
+          />
+        </ng-container>
+      </div>
+      <p class="testimonial-body" [innerHTML]="card.body"></p>
+    </div>
   </div>
-</div>
+</ng-container>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimaryCard } from 'src/app/shared/components/primary-card/primary-card.component';
 import { SectionModel } from 'src/app/shared/components/section/section.component';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-our-services',
@@ -8,6 +9,7 @@ import { SectionModel } from 'src/app/shared/components/section/section.componen
   styleUrls: ['./our-services.component.scss']
 })
 export class OurServicesComponent implements OnInit {
+  socialMediaLinks = environment.socialMediaLinks;
   sectionModel: SectionModel = {
     title: 'Nossos Serviços',
     sectionName: 'Cuidados Médicos especializados',

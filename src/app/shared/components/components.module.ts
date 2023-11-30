@@ -5,6 +5,11 @@ import { TestimonialCardComponent } from './testimonial-card/testimonial-card.co
 import { TeamCardComponent } from './team-card/team-card.component';
 import { SectionComponent } from './section/section.component';
 import { SliderComponent } from './slider/slider.component';
+import { HeaderComponent } from './header/header.component';
+import { RouterModule } from '@angular/router';
+import { FixedWppBtnComponent } from './fixed-wpp-btn/fixed-wpp-btn.component';
+import { ImageWrapperComponent } from './image-wrapper/image-wrapper.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -14,9 +19,14 @@ import { SliderComponent } from './slider/slider.component';
     TestimonialCardComponent,
     TeamCardComponent,
     SectionComponent,
-    SliderComponent
+    HeaderComponent,
+    SliderComponent,
+    FixedWppBtnComponent,
+    FooterComponent,
+    ImageWrapperComponent
   ],
   imports: [
+    RouterModule,
     CommonModule
   ],
   exports: [
@@ -24,7 +34,11 @@ import { SliderComponent } from './slider/slider.component';
     TestimonialCardComponent,
     TeamCardComponent,
     SectionComponent,
-    SliderComponent
+    HeaderComponent,
+    SliderComponent,
+    FixedWppBtnComponent,
+    FooterComponent,
+    ImageWrapperComponent
   ]
 })
 export class ComponentsModule { }

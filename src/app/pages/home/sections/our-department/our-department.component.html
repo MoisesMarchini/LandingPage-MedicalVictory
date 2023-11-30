@@ -1,32 +1,26 @@
 <app-section
   [model]="sectionModel"
-  [customSectionClasses]="'bg-primary-light'"
   [customContainerClasses]="
     'd-grid grid-col-md-2 grid-col-1 gap-9 align-items-center'
   "
 >
-  <div leftContent>
-    <img [src]="rightSideImg" class="w-100" />
-  </div>
+  <app-image-wrapper leftContent [imgPath]="rightSideImg"></app-image-wrapper>
   <div sectionContent class="section-content d-flex flex-column gap-2">
     <ng-container *ngFor="let department of departments">
-      <div class="card-department">
-        <div class="card-content">
-          <h6 class="city">
+      <div class="card-department d-flex gap-1 p-2 card-shadow">
+        <div class="card-content ms-1 flex-grow-1">
+          <h6 class="city fs-16">
             {{ department.city }}
           </h6>
-          <p class="adress">
-            <i class="fa-solid fa-map-location-dot"></i>
+          <p class="adress fw-600 fs-12">
+            <i class="fa-solid fa-location-dot me-1"></i>
             {{ department.adress }}
           </p>
-          <div class="card-links d-flex gap-1">
-            <a href="#">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-            <a href="#">
-              <i class="fa-solid fa-map-location-dot"></i>
-            </a>
-          </div>
+        </div>
+        <div class="card-links d-flex gap-1">
+          <a href="#">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
         </div>
       </div>
     </ng-container>

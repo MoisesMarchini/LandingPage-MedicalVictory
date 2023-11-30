@@ -50,6 +50,7 @@ export class SliderComponent implements OnInit, AfterViewInit{
     });
 
     this.playSlider();
+    this.currentSlide = 0;
   }
 
   loadProperties() {

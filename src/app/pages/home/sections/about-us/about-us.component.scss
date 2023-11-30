@@ -1,0 +1,14 @@
+ul li {
+  position: relative;
+  margin-bottom: .75em;
+  display: flex;
+  &::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    display: grid;
+    place-content: baseline;
+    margin-top: 1px;
+    margin-right: 4px;
+  }
+}

@@ -1,0 +1,14 @@
+hr.section-divider {
+  overflow: hidden;
+  width: min(100%, 100px);
+  height: 4px;
+  background: linear-gradient(45deg, var(--highlight), transparent);
+  background: var(--highlight);
+  border: none;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.section-name {
+  color: var(--highlight);
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-footer',
@@ -6,11 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  socialMediaIcons = {
-      'Facebook': '/assets/icons/facebook.svg',
-      'Instagram': '/assets/icons/instagram.svg',
-      'Twitter': '/assets/icons/twitter.svg',
-    }
+  socialMediaLinks = environment.socialMediaLinks;
   getInTouch =
     {
       title: 'Get In Touch',
@@ -25,7 +22,7 @@ export class FooterComponent {
         '/assets/icons/icon-email.svg',
       ]
     }
-  
+
   footerLists = [
     {
       title: 'Company Info',

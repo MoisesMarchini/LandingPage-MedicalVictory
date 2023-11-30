@@ -1,0 +1,31 @@
+.img-wrapper {
+  --_shadow-color: var(--border-color);
+  margin: auto;
+  max-width: 450px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: var(--primary);
+  border-radius: 20px;
+  overflow: hidden;
+  &.shadow-bottom-right {
+    box-shadow: 24px 24px 0px var(--_shadow-color);
+    transform: translateX(-12px);
+  }
+  &.shadow-bottom-left {
+    box-shadow: -24px 24px 0px var(--_shadow-color);
+    transform: translateX(12px);
+  }
+  &.shadow-top-left {
+    box-shadow: -24px -24px 0px var(--_shadow-color);
+    transform: translateX(12px, 12px);
+  }
+  &.shadow-top-right {
+    box-shadow: 24px -24px 0px var(--_shadow-color);
+    transform: translateX(-12px, 12px);
+  }
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

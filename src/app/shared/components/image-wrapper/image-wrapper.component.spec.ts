@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TeamComponent } from './team.component';
+import { ImageWrapperComponent } from './image-wrapper.component';
 
-describe('TeamComponent', () => {
-  let component: TeamComponent;
-  let fixture: ComponentFixture<TeamComponent>;
+describe('ImageWrapperComponent', () => {
+  let component: ImageWrapperComponent;
+  let fixture: ComponentFixture<ImageWrapperComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TeamComponent ]
+      declarations: [ ImageWrapperComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TeamComponent);
+    fixture = TestBed.createComponent(ImageWrapperComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

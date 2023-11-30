@@ -7,12 +7,17 @@
 
 .slide{
   position: relative;
-  scroll-snap-align: start;
   flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+
+  scroll-snap-align: center;
 }
 
 @media (min-width: $md-breakpoint) {
   .slide {
     flex: 0 0 50%;
+    transform: translateX(50%);
   }
 }

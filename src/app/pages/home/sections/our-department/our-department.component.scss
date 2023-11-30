@@ -5,3 +5,27 @@ hr.section-divider {
   background-color: var(--highlight);
   border: 0;
 }
+
+.card-department {
+  position: relative;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  align-items: center;
+  background-color: var(--highlight);
+  border-color: var(--highlight);
+  color: white;
+  .adress {
+    margin: 0;
+  }
+}
+
+.card-links {
+  height: 100%;
+  a {
+    aspect-ratio: 1;
+    width: 3rem;
+    font-size: 2rem;
+    display: grid;
+    place-content: center;
+  }
+}
