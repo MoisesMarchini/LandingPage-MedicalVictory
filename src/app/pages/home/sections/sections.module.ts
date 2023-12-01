@@ -10,6 +10,7 @@ import { HeroSliderComponent } from './hero-slider/hero-slider.component';
 import { EventsComponent } from './events/events.component';
 import { RouterModule } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { HeroComponent } from './hero/hero.component';
 
 
 
@@ -21,7 +22,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     OurServicesComponent,
     HeroSliderComponent,
     EventsComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    HeroComponent
   ],
   imports: [
     RouterModule,
@@ -36,7 +38,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     OurServicesComponent,
     HeroSliderComponent,
     EventsComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    HeroComponent
   ]
 })
 export class SectionsModule { }

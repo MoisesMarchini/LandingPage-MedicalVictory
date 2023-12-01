@@ -1,10 +1,57 @@
 <header id="header" class="d-flex" [class.is-over-slider]="overSlider">
   <nav
     id="header-nav"
-    class="d-flex align-items-center container overflow-hidden text-bg-white fs-14 fw-600 py-3"
+    class="d-flex align-items-center container px-4 overflow-hidden text-bg-white fs-14 fw-600 py-3"
   >
-    <h1 class="brand-name fs-18 m-0">Instituto <br />Neurodiversidade</h1>
-    <ul class="d-none d-lg-flex align-items-center nav-list gap-5 ms-auto mx-8">
+    <h1 class="brand-name fs-18 m-0 me-auto">
+      Instituto <br />Neurodiversidade
+    </h1>
+    <button
+      class="btn-sidebar d-lg-none"
+      [class.nav-show]="!collapseMobileNav"
+      (click)="collapseMobileNav = !collapseMobileNav"
+    >
+      <i class="fa-solid fa-bars icon-open"></i>
+      <i class="fa-solid fa-xmark icon-close"></i>
+    </button>
+    <ul class="d-none d-lg-flex align-items-center nav-list gap-2 mx-8">
+      <li class="nav-list-item">
+        <a
+          [routerLink]="['/inicio']"
+          routerLinkActive="active"
+          class="nav-item-link"
+          >Início</a
+        >
+      </li>
+      <li class="nav-list-item">
+        <a
+          [routerLink]="['/sobre']"
+          routerLinkActive="active"
+          class="nav-item-link"
+          >Sobre nós</a
+        >
+      </li>
+      <li class="nav-list-item">
+        <a
+          [routerLink]="['/servicos']"
+          routerLinkActive="active"
+          class="nav-item-link"
+          >Serviços</a
+        >
+      </li>
+      <li class="nav-list-item">
+        <a
+          [routerLink]="['/loja']"
+          routerLinkActive="active"
+          class="nav-item-link"
+          >Loja</a
+        >
+      </li>
+    </ul>
+    <ul
+      class="d-lg-none align-items-center nav-list mobile-nav gap-2 mx-8"
+      [class.show]="!collapseMobileNav"
+    >
       <li class="nav-list-item">
         <a
           [routerLink]="['/inicio']"

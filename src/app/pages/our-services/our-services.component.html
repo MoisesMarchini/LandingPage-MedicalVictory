@@ -1,0 +1,10 @@
+<app-header></app-header>
+<main>
+  <app-sidepage-header [model]="pageHeader"></app-sidepage-header>
+  <section class="section-container px-4" *ngFor="let card of cards">
+    <app-service-big-card
+      [isPopUp]="false"
+      [model]="card"
+    ></app-service-big-card>
+  </section>
+</main>

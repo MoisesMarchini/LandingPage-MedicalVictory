@@ -1,17 +1,53 @@
 @import "../../styles/_breakpoints.scss";
 
 :host {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  transition: .3s;
-  visibility: hidden;
-  opacity: 0;
-  .card {
-    transform: translateY(20%);
+  .close-btn {
+    display: none;
+  }
+  &.is-popup {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: .3s;
+    visibility: hidden;
+    opacity: 0;
+    .card {
+      transform: translateY(20%);
+      border-radius: 20px !important;
+      max-height: 88vh;
+      box-shadow: var(--card-shadow-sm);
+    }
+    .black-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.295);
+      pointer-events: visible;
+    }
+    .close-btn {
+      position: absolute;
+      margin: 1rem;
+      top: 0;
+      right: 0;
+      background-color: white;
+      width: 48px;
+      height: 48px;
+      font-size: 24px;
+      border-radius: 50%;
+      border: 0;
+      color: var(--base-text);
+      display: grid;
+      place-content: center;
+      line-height: 0;
+      z-index: 10;
+      cursor: pointer;
+      transition: .3s;
+      &:hover {
+        background-color: var(--muted);
+      }
+    }
   }
   &.show:not(.hide) {
     visibility: visible;
@@ -20,49 +56,15 @@
       transform: translateY(0%);
     }
   }
-  &.hidden {
-    // display: none;
-  }
-}
-
-.black-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.295);
-  pointer-events: visible;
-}
-
-.close-btn {
-  position: absolute;
-  margin: 1rem;
-  top: 0;
-  right: 0;
-  background-color: white;
-  width: 48px;
-  height: 48px;
-  font-size: 24px;
-  border-radius: 50%;
-  border: 0;
-  color: var(--base-text);
-  display: grid;
-  place-content: center;
-  line-height: 0;
-  z-index: 10;
-  cursor: pointer;
-  transition: .3s;
-  &:hover {
-    background-color: var(--muted);
-  }
 }
 
 .card {
   transition: transform .3s;
   isolation: isolate;
   z-index: 1;
-  border-radius: 20px;
   overflow: auto;
   position: relative;
-  max-height: 88vh;
+  border-radius: 8px;
 }
 
 .card-content {

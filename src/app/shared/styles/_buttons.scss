@@ -1,33 +1,48 @@
 .btn {
   --_btn-color: var(--black);
   --_btn-bg-color: var(--white);
+  --_btn-hover-color: var(--white);
+  --_btn-hover-bg-color: var(--black);
   padding: 12px 24px;
   border-radius: 4px;
   background-color: var(--_btn-bg-color);
   color: var(--_btn-color);
   border: 0;
   cursor: pointer;
+  transition: .3s;
+  &:hover, &.active, &:active {
+    background-color: var(--_btn-hover-bg-color);
+    color: var(--_btn-hover-color);
+  }
 }
 
 .btn.btn-primary {
   --_btn-color: var(--white);
   --_btn-bg-color: var(--primary);
+  --_btn-hover-color: var(--white);
+  --_btn-hover-bg-color: var(--primary-dark);
 }
 
 .btn.btn-outline-primary {
   --_btn-color: var(--primary);
   --_btn-bg-color: transparent;
+  --_btn-hover-color: var(--white);
+  --_btn-hover-bg-color: var(--primary);
   border: 1px solid var(--primary);
 }
 
 .btn.btn-highlight {
   --_btn-color: var(--white);
   --_btn-bg-color: var(--highlight);
+  --_btn-hover-color: var(--white);
+  --_btn-hover-bg-color: var(--highlight);
 }
 
 .btn.btn-outline-highlight {
   --_btn-color: var(--highlight);
   --_btn-bg-color: transparent;
+  --_btn-hover-color: var(--white);
+  --_btn-hover-bg-color: var(--highlight);
   border: 1px solid var(--highlight);
 }
 
@@ -39,8 +54,4 @@
   place-items: center;
   padding: 0;
   border: 0;
-}
-
-.rounded-pill {
-  border-radius: 10000px;
 }

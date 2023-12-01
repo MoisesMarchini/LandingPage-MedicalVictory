@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class HeaderComponent {
   @Input() overSlider = false;
+
+  collapseMobileNav = true;
 }

@@ -1,7 +1,5 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
-import { SectionModel } from '../section/section.component';
+import { Component, HostBinding, OnInit, Input } from '@angular/core';
 import { PrimaryBigCardService } from './primary-big-card.service';
-import { SecondaryCard } from '../secondary-card/secondary-card.component';
 
 @Component({
   selector: 'app-service-big-card',
@@ -9,30 +7,35 @@ import { SecondaryCard } from '../secondary-card/secondary-card.component';
   styleUrls: ['./service-big-card.component.scss']
 })
 export class ServiceBigCardComponent implements OnInit {
-  model?: BigCard;
+  @Input() isPopUp = true;
+  @Input() model?: BigCard;
   private _hide = true;
 
   constructor(private primaryBigCardService: PrimaryBigCardService) {
-    primaryBigCardService.$card.subscribe(card => {
-      this.model = card;
-      this._hide = !card;
-    });
+    if(this.isPopUp)
+      primaryBigCardService.$card.subscribe(card => {
+        this.model = card;
+        this._hide = !card;
+      });
   }
 
   ngOnInit() {
   }
 
   close = () => {
+    if (!this.isPopUp)
+      return;
+
     this._hide = true;
     setTimeout(() => {
       this.primaryBigCardService.close();
     }, 300);
   };
 
-  @HostBinding('class.show') get show() { return !!this.model };
-  @HostBinding('class.hide') get hide() { return this._hide };
-
-  @HostBinding('class.hidden') get hidden() { return !this.model && this._hide};
+  @HostBinding('class.is-popup') get _isPopUp() { return this.isPopUp };
+  @HostBinding('class.show') get show() { return !!this.model || !this.isPopUp };
+  @HostBinding('class.hide') get hide() { return this._hide && this.isPopUp };
+  @HostBinding('class.hidden') get hidden() { return !this.model && this._hide && this.isPopUp };
 }
 
 export interface BigCard {

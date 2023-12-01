@@ -3,19 +3,31 @@
   .grid-col-#{$cols} {
     grid-template-columns: repeat(#{$cols}, 1fr);
   }
+  .col-span-#{$cols}{
+    grid-column: span #{$cols};
+  }
   @media (min-width: $md-breakpoint) {
     .grid-col-md-#{$cols} {
       grid-template-columns: repeat(#{$cols}, 1fr);
+    }
+    .col-span-md-#{$cols}{
+      grid-column: span #{$cols};
     }
   }
   @media (min-width: $lg-breakpoint) {
     .grid-col-lg-#{$cols} {
       grid-template-columns: repeat(#{$cols}, 1fr);
     }
+    .col-span-lg-#{$cols}{
+      grid-column: span #{$cols};
+    }
   }
   @media (min-width: $xl-breakpoint) {
     .grid-col-xl-#{$cols} {
       grid-template-columns: repeat(#{$cols}, 1fr);
+    }
+    .col-span-xl-#{$cols}{
+      grid-column: span #{$cols};
     }
   }
 }
