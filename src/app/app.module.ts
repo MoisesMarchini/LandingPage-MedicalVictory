@@ -6,6 +6,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { PagesModule } from './pages/pages.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SectionAnimDirective } from './shared/directives/section-anim.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PagesRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [SectionAnimDirective],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

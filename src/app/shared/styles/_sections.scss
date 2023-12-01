@@ -1,6 +1,10 @@
 .section-container {
   --_base-padding-y: 3rem;
   --_section-spacing-top: calc(7vmin + (var(--_base-padding-y) * .5));
+
+  position: relative;
+  transition: transform .5s, opacity .5s;
+
   &:not(header){
     padding-top: var(--_section-spacing-top);
     padding-bottom: var(--_section-spacing-top);
@@ -13,4 +17,13 @@
   .mb-section {
     margin-bottom: var(--_section-spacing-top);
   }
+}
+
+.hide-section:not(.no-anim){
+  transform: translateY(100px);
+  opacity: 0;
+}
+.no-anim .hide-section {
+  transform: translateY(0px);
+  opacity: 1;
 }

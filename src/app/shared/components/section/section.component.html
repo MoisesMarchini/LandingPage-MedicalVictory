@@ -1,5 +1,8 @@
 <section [class]="customSectionClasses" *ngIf="model">
-  <div [class]="'container section-container ' + customContainerClasses">
+  <div
+    sectionAnim
+    [class]="'container section-container ' + customContainerClasses"
+  >
     <ng-content select="[leftContent]"></ng-content>
     <div class="content">
       <ng-content select="[sectionBefore]"></ng-content>

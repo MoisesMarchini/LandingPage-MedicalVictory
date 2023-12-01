@@ -19,7 +19,7 @@ import { SectionsModule } from './home/sections/sections.module';
     RouterModule,
     CommonModule,
     SharedModule,
-    SectionsModule
+    SectionsModule,
   ]
 })
 export class PagesModule { }

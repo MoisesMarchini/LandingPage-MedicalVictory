@@ -1,7 +1,12 @@
 <app-header></app-header>
 <main>
   <app-sidepage-header [model]="pageHeader"></app-sidepage-header>
-  <section class="section-container px-4" *ngFor="let card of cards">
+  <section
+    sectionAnim
+    class="section-container px-4"
+    *ngFor="let card of cards; let i = index"
+    [class.no-anim]="i === 0"
+  >
     <app-service-big-card
       [isPopUp]="false"
       [model]="card"

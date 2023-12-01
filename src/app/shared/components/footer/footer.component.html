@@ -1,4 +1,4 @@
-<footer class="section-container pb-0">
+<footer class="section-container py-0 no-anim">
   <div class="row mb-10 d-none">
     <div class="container d-flex gap-5" style="flex-wrap: wrap">
       <div *ngFor="let list of footerLists" class="footer-list flex-grow-1">
@@ -39,8 +39,8 @@
     </div>
   </div>
   <div
-    class="row"
-    style="background-color: #fafafa; padding-top: 24px; padding-bottom: 24px"
+    class="row bg-external-bg"
+    style="padding-top: 24px; padding-bottom: 24px"
   >
     <div
       class="container d-flex flex-column fw-600 fs-14 gap-3"
@@ -68,10 +68,16 @@
           </a>
         </li>
       </ul>
-      <p class="text-secondary-text m-0">
-        Instituto Neurodiversidade 2023 &copy; - Todos os direitos reservados
+      <p class="text-muted m-0" style="line-height: 1.6">
+        Copyright © 2023 Instituto Neurodiversidade
         <br />
-        Site desenvolvido por <a href="#" target="_blank">Moisés Marchini</a>
+        Site desenvolvido por
+        <a
+          style="text-decoration: underline"
+          href="https://moisesmarchini.vercel.app"
+          target="_blank"
+          >Moisés Marchini</a
+        >
       </p>
     </div>
   </div>

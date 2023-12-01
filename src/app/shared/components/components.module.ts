@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ServiceBigCardComponent } from './service-big-card/service-big-card.component';
 import { SecondaryCardComponent } from './secondary-card/secondary-card.component';
 import { SidepageHeaderComponent } from './sidepage-header/sidepage-header.component';
+import { DirectivesModule } from '../directives/directives.module';
 
 
 
@@ -33,7 +34,8 @@ import { SidepageHeaderComponent } from './sidepage-header/sidepage-header.compo
   ],
   imports: [
     RouterModule,
-    CommonModule
+    CommonModule,
+    DirectivesModule
   ],
   exports: [
     PrimaryCardComponent,
