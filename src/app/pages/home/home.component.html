@@ -1,9 +1,16 @@
 <app-header [overSlider]="true"></app-header>
 <main>
   <app-hero></app-hero>
-  <app-about-us></app-about-us>
-  <app-our-services id="services"></app-our-services>
-  <app-our-department></app-our-department>
-  <app-events></app-events>
-  <app-testimonials></app-testimonials>
+  <app-about-us
+    style="--_bg-color: var(--white); --_offset-top: -50px"
+  ></app-about-us>
+  <app-our-services
+    id="services"
+    style="--_bg-color: var(--border-color)"
+  ></app-our-services>
+  <app-our-department style="--_bg-color: var(--white)"></app-our-department>
+  <app-events
+    style="--_bg-color: whitesmoke; --border-color: var(--muted)"
+  ></app-events>
+  <app-testimonials style="--_bg-color: var(--white)"></app-testimonials>
 </main>

@@ -4,22 +4,11 @@
     [manualNavColor]="'var(--primary)'"
     [slideTimer]="8000"
     [slides]="slides"
-    [circleControl]="true"
+    [customControlInsideSlide]="'-.5rem'"
   >
     <div customSlides class="custom-slider w-100 d-flex flex-nowrap">
       <ng-container *ngFor="let slide of slides">
         <app-secondary-card [model]="slide" class="slide"></app-secondary-card>
-        <!-- <div class="slide w-100 p-4 p-md-4">
-          <div class="slide-content">
-            <div class="slide-img-wrapper">
-              <img [src]="slide.backgroundPath" class="slide-img" />
-            </div>
-            <div class="slide-body">
-              <h4 [innerHTML]="slide.title"></h4>
-              <p [innerHTML]="slide.body"></p>
-            </div>
-          </div>
-        </div> -->
       </ng-container>
     </div>
   </app-slider>

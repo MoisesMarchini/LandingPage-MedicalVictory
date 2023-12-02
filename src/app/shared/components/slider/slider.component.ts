@@ -11,6 +11,8 @@ export class SliderComponent implements OnInit, AfterViewInit{
   @Input() slideTimer = 5000;
   @Input() hideControl = false;
   @Input() controlMargin = false;
+  @Input() controlInsideSlide = false;
+  @Input() customControlInsideSlide?: string;
   @Input() circleControl = false;
   @Input() slides: any[] = [];
   @Input() manualNavColor: string = 'white';

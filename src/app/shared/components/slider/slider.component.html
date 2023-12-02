@@ -1,8 +1,16 @@
 <div
   class="slider-wrapper"
-  [style]="'--_color: ' + manualNavColor"
+  [style]="
+    '--_color: ' +
+    manualNavColor +
+    ';' +
+    (customControlInsideSlide
+      ? '--_control-x: ' + customControlInsideSlide
+      : '')
+  "
   [class.hide-control]="hideControl"
   [class.circle-control]="circleControl"
+  [class.control-inside]="controlInsideSlide"
 >
   <button class="control control-left" (click)="prevSlide(true)">
     <i class="fa-solid fa-chevron-left"></i>
@@ -26,26 +34,6 @@
     class="slider hide-scrollbar overflow-hidden"
     [class.control-margin]="controlMargin"
   >
-    <!-- <ng-container *ngIf="isArrayOfSlideClass">
-      <div *ngFor="let slide of slides; let i = index" class="slide">
-        <img loading="lazy" [src]="slide.backgroundImg" class="slide-bg" />
-        <div class="container">
-          <div class="slide-content">
-            <h2
-              class="h5 text-highlight mb-2 pe-3"
-              [innerHTML]="slide.subtitle"
-            ></h2>
-            <h1 class="fs-42 fw-600 mb-2" [innerHTML]="slide.title"></h1>
-            <h4 class="fs-16 fw-500 mb-4" [innerHTML]="slide.body"></h4>
-            <a
-              href="#"
-              class="action-link btn btn-highlight text-capitalize fw-600 my-4"
-              >Fale conosco</a
-            >
-          </div>
-        </div>
-      </div>
-    </ng-container> -->
     <ng-content select="[customSlides]"></ng-content>
   </div>
 </div>

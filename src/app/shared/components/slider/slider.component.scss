@@ -6,6 +6,10 @@
   --_control-width: clamp( 32px, 15%, 80px);
   position: relative;
   display: grid;
+  --_control-x: 50%;
+  &.control-inside {
+    --_control-x: 0%;
+  }
   &.hide-control .control{
     display: none;
   }
@@ -36,11 +40,11 @@
     transition: opacity .3s;
     &.control-left {
       left: 0;
-      transform: translate(-50%, -50%);
+      transform: translate(calc(-1 * var(--_control-x)), -50%);
     }
     &.control-right {
       right: 0;
-      transform: translate(50%, -50%);
+      transform: translate(var(--_control-x), -50%);
     }
     &:hover{
       opacity: 1;

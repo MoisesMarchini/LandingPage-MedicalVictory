@@ -9,19 +9,22 @@
     inset: 0;
     z-index: 100;
     display: flex;
-    align-items: center;
-    overflow: hidden;
+    align-items: flex-start;
+    overflow: auto;
     transition: .3s;
     visibility: hidden;
     opacity: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     .card {
+      overflow: hidden;
+      margin: auto;
       transform: translateY(20%);
       border-radius: 20px !important;
-      max-height: 88vh;
       box-shadow: var(--card-shadow-sm);
     }
     .black-overlay {
-      position: absolute;
+      position: fixed;
       inset: 0;
       background-color: rgba(0, 0, 0, 0.295);
       pointer-events: visible;
@@ -109,9 +112,10 @@ hr.section-divider {
 }
 
 .img-container{
+  height: 100%;
   > img.bg-img {
     width: 100%;
-    height: clamp(250px, 75vmin, 450px);
+    height: 100%;//clamp(250px, 75vmin, 450px);
     object-fit: cover;
   }
 }

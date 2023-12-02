@@ -20,7 +20,7 @@ export class SectionAnimDirective implements OnInit{
     const elementRect = element.getBoundingClientRect();
     const elementTop = elementRect.top + scrollPosition;
 
-    this.isAboveHalf = elementTop < (scrollPosition + 100 + viewportHeight / 4 * 3);
+    this.isAboveHalf = elementTop < (scrollPosition + viewportHeight);
   }
 
   @HostBinding('class.hide-section')
