@@ -7,5 +7,5 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./fixed-wpp-btn.component.scss']
 })
 export class FixedWppBtnComponent {
-  wppChat = environment.departmentLinks.Queimados;
+  wppChat = environment.whatsappChat(environment.departments[0].whatsapp);
 }

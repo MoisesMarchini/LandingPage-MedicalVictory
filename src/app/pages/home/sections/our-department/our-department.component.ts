@@ -14,18 +14,7 @@ export class OurDepartmentComponent {
     title: 'Marque sua Consulta',
     description: "Para agendar sua visita ou consulta, <br>basta clicar na unidade mais próxima e falar conosco via Whatsapp."
   }
-  departments = [
-    {
-      city: 'Queimados',
-      adress: 'Rua Santa Rita, 295 – Pacaembú',
-      wppChat: environment.departmentLinks['Queimados'],
-      gmaps: ''
-    },
-    {
-      city: 'São João de Meriti',
-      adress: 'Rua Campos, 67 – Vila São João',
-      wppChat: environment.departmentLinks['SaoJoaoDeMeriti'],
-      gmaps: ''
-    }
-  ]
+  departments = environment.departments;
+
+  getWhatsappLink = (number: string, message?: string) => environment.whatsappChat(number, message)
 }

@@ -3,6 +3,28 @@ export const environment = {
     'Queimados': 'https://s.tintim.app/whatsapp/9dc0e5b9-2c5f-4b72-9e15-f032922c5b81/b03a701b-d117-48de-a83e-c2df215542e0',
     'SaoJoaoDeMeriti': 'https://s.tintim.app/whatsapp/811a263b-d6ce-46da-bf4b-739517e059de/f70a97d1-42ce-4e09-865e-c9463adde6e4'
   },
+  departments: [
+    {
+      city: 'Queimados',
+      adress: 'Rua Santa Rita, 295 – Pacaembú',
+      whatsapp: '21990566410',
+      gmaps: 'https://maps.app.goo.gl/dwSKNdeHBGRXDAeP7'
+    },
+    {
+      city: 'São João de Meriti',
+      adress: 'Rua Campos, 67 – Vila São João',
+      whatsapp: '21980959124',
+      gmaps: 'https://maps.app.goo.gl/FSjtK1VrLFEdwAGE7'
+    }
+  ],
+  whatsappChat(number: string, message?: string) {
+    const baseLink = 'https://wa.me//55';
+    const defaultMessage = 'Olá! Eu gostaria de saber mais sobre os serviços de vocês.';
+
+    message = message ?? defaultMessage;
+
+    return `${baseLink}${number}?text=${message}`;
+  },
   socialMediaLinks: {
     'Facebook': 'https://www.facebook.com/institutoneurodiversidade/',
     'Instagram': 'https://www.instagram.com/institutoneurodiversidade',
@@ -94,5 +116,7 @@ export const environment = {
       title: 'Loja',
       subtitle: 'Vista a Diversidade com Estilo e Conhecimento no Instituto Neurodiversidade'
     }
-  }
+  },
+
+
 };

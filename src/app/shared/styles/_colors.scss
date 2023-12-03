@@ -9,6 +9,7 @@ $primary-dark: #071066;
 $highlight: #ff7f02;
 $dark: #26335D;
 $muted: #BDBDBD;
+$whitesmoke: #f5f5f5;
 $text-color: #252B42;
 $primary-text-color: $primary;
 $secondary-text-color: #737373;
@@ -27,6 +28,7 @@ $all-colors: (
   'highlight': $highlight,
   'dark': $dark,
   'muted': $muted,
+  'whitesmoke': $whitesmoke,
   'base-text': $text-color,
   'primary-text': $primary-text-color,
   'secondary-text': $secondary-text-color,

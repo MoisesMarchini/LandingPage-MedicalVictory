@@ -1,16 +1,15 @@
 <app-header [overSlider]="true"></app-header>
 <main>
   <app-hero></app-hero>
-  <app-about-us
-    style="--_bg-color: var(--white); --_offset-top: -50px"
-  ></app-about-us>
+  <app-about-us class="bg-white bg-after"></app-about-us>
   <app-our-services
+    class="bg-whitesmoke bg-before bg-after"
     id="services"
-    style="--_bg-color: var(--border-color)"
   ></app-our-services>
-  <app-our-department style="--_bg-color: var(--white)"></app-our-department>
+  <app-our-department class="bg-white bg-before bg-after"></app-our-department>
   <app-events
-    style="--_bg-color: whitesmoke; --border-color: var(--muted)"
+    class="bg-whitesmoke bg-before bg-after"
+    style="--border-color: var(--muted)"
   ></app-events>
-  <app-testimonials style="--_bg-color: var(--white)"></app-testimonials>
+  <app-testimonials class="bg-white bg-before"></app-testimonials>
 </main>

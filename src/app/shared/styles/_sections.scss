@@ -1,3 +1,7 @@
+section {
+  background-color: var(--_bg-color);
+}
+
 .section-container {
   --_base-padding-y: 3rem;
   --_section-spacing-top: calc(7vmin + (var(--_base-padding-y) * .5));
@@ -30,25 +34,4 @@
 
 main {
   --_offset-top: -25px;
-}
-section {
-  background-color: var(--_bg-color);
-  position: relative;
-  &::before, &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 50px;
-    isolation: isolate;
-    z-index: 1;
-  }
-  &::before {
-    top: var(--_offset-top);
-    background: linear-gradient(to top left, var(--_bg-color) 50%, transparent 51%);
-  }
-  &::after {
-    bottom: -25px;
-    background: linear-gradient(to top left, transparent 50%, var(--_bg-color) 51%);
-  }
 }

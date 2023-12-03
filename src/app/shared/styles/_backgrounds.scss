@@ -1,5 +1,40 @@
 @each $color-name, $color-value in $all-colors {
   .bg-#{$color-name}{
-    background-color: var(--#{$color-name});
+    --_bg-color: var(--#{$color-name});
+    background-color: var(--_bg-color);
+  }
+}
+
+.bg-after {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px;
+    isolation: isolate;
+    z-index: 1;
+  }
+  &::after {
+    bottom: -25px;
+    background: linear-gradient(to top left, transparent 50%, var(--_bg-color) 51%);
+  }
+}
+
+.bg-before {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px;
+    isolation: isolate;
+    z-index: 1;
+  }
+  &::before {
+    top: var(--_offset-top);
+    background: linear-gradient(to top left, var(--_bg-color) 50%, transparent 51%);
   }
 }

@@ -44,7 +44,12 @@ export class OurServicesComponent implements OnInit {
       bgPath: card.bgImgPath,
       title: card.title,
       body: card.body,
-      externalLink: this.departmentLinks.Queimados
+      externalLink: this.whatsappLink(card.title)
     }
+  }
+
+  private whatsappLink(serviceName: string) {
+    const message = `Olá! Eu gostaria de saber mais sobre o serviço de *${serviceName}*`
+    return environment.whatsappChat(environment.departments[0].whatsapp, message);
   }
 }
